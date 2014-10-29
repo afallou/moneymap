@@ -69,6 +69,7 @@ a = [item for sublist in a for item in sublist]
 import json
 f = open('congress_full.json', 'r')
 x = json.load(f)
+f.close()
 
 funding_reps = {}
 funding_senate = {}
