@@ -7,6 +7,9 @@ from influenceexplorer import InfluenceExplorer
 td = TransparencyData('4df4c44769f4411a982d024313deb894')
 api = InfluenceExplorer('4df4c44769f4411a982d024313deb894')
 
+def process_person():
+    
+
 # keys we get for a contributor
 cont_interesting_keys = ["contributor_address",
                         "contributor_category",
@@ -32,10 +35,12 @@ funding_sources_id = [] # funding source ids (for tracking in this script)
 
 
 count = 0
-with open('contributors.json', 'a') as contf:
-    with open('contributions.json', 'a') as matchf:
+MAX_COUNT = 10000
+with open('contributors.json', 'w') as contf:
+    with open('contributions.json', 'w') as matchf:
+        matches = []
         for person in congress_data['objects']:
-            if count < 10:
+            if count < MAX_COUNT:
                 count += 1
                 name = person['person']['firstname'] + ' ' + person['person']['lastname']
                 print "Processing", name
@@ -52,6 +57,7 @@ with open('contributors.json', 'a') as contf:
                         for key in cont_interesting_keys:
                             source[key] = contribution[key]
                         funding_sources.append(source)
+                matches.append({'recipient_id': person['person']['id'], 'contributors': contributors_id })
         ### end for person ###
-                matchf.write(simplejson.dumps({'recipient_id': person['person']['id'], 'contributors': contributors_id }, indent=4, sort_keys=False))
+        matchf.write(simplejson.dumps(matches, indent=4, sort_keys=False))
         contf.write(simplejson.dumps(funding_sources, indent=4, sort_keys=True))
