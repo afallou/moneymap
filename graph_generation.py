@@ -17,8 +17,10 @@ def generateGraph():
     contributions = loadData()
     graph = snap.PNGraph.New()
     sources = {}
+    nodes = []
     for contribution in contributions:
         pid = contribution["recipient_id"]
+        nodes.append({"id": pid})
         for contributor in contribution["contributors"]:
             if contributor in sources.keys():
                 if not pid in sources[contributor]:
@@ -31,5 +33,5 @@ def generateGraph():
             for j in xrange(i + 1, len(recipients)):
                 links.append( {"source": recipients[i], "target": recipients[j]} )
     with open('recipients_graph.json', 'w') as rf:
-        rf.write(simplejson.dumps(links, indent=4))
-    
+        rf.write(simplejson.dumps({"nodes": nodes, "links": links}, indent=4))
+        
