@@ -39,6 +39,7 @@ with open('contributors.json', 'a') as contf:
                 count += 1
                 name = person['person']['firstname'] + ' ' + person['person']['lastname']
                 print "Processing", name
+                # fetch data from api
                 contributions = td.contributions(cycle='2012', recipient_ft = name)
                 contributors_id = []
                 for contribution in contributions:
@@ -47,8 +48,10 @@ with open('contributors.json', 'a') as contf:
                     if not contribution['contributor_ext_id'] in funding_sources_id:
                         funding_sources_id.append(contribution['contributor_ext_id'])
                         source = {}
+                        # add source to our dict
                         for key in cont_interesting_keys:
                             source[key] = contribution[key]
                         funding_sources.append(source)
+        ### end for person ###
                 matchf.write(simplejson.dumps({'recipient_id': person['person']['id'], 'contributors': contributors_id }, indent=4, sort_keys=False))
         contf.write(simplejson.dumps(funding_sources, indent=4, sort_keys=True))
