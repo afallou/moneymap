@@ -3,6 +3,8 @@ import simplejson
 from transparencydata import TransparencyData
 from influenceexplorer import InfluenceExplorer
 import multiprocessing
+import signal
+import sys
 
 
 td = TransparencyData('4df4c44769f4411a982d024313deb894')
@@ -20,6 +22,12 @@ cont_interesting_keys = ["contributor_address",
                         "contributor_state",
                         "contributor_type",
                         "contributor_zipcode"]
+
+def signal_handler(signal, frame):
+    print "Exiting"
+    api_pool.terminate()
+    processing_pool.terminate()
+    sys.exit(0)
 
 def process_person(name, person_id):
     print "Fetching data for", name
@@ -40,10 +48,12 @@ def process_api_data(person_id, contributions, out_data_queue, funding_sources_i
         lock.acquire()
         if not contribution['contributor_ext_id'] in funding_sources_id:
             funding_sources_id.append(contribution['contributor_ext_id'])
-        lock.release()
+            lock.release()
             # add source to our dict
             for key in contributor_keys:
                 source[key] = contribution[key]
+        else:
+            lock.release()
     match = {'recipient_id': person_id, 'contributors': contributors_id }
     out_data_queue.put({'match': match, 'source': source})
 
@@ -63,11 +73,16 @@ count = 0
 MAX_COUNT = 10000
 num_processes = 4
 
+signal.signal(signal.SIGTERM, signal_handler)
+
+# multiprocessing stuff
+manager = multiprocessing.Manager()
 api_pool = multiprocessing.Pool(processes=num_processes)
 processing_pool = multiprocessing.Pool(processes=num_processes)
-person_queue = multiprocessing.Queue()
-out_data_queue = multiprocessing.Queue()
+person_queue = manager.Queue()
+out_data_queue = manager.Queue()
 lock = multiprocessing.Lock()
+
 with open('contributors.json', 'w') as contf:
     with open('contributions.json', 'w') as matchf:
         matches = []
