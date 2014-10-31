@@ -23,21 +23,24 @@ cont_interesting_keys = ["contributor_address",
                         "contributor_type",
                         "contributor_zipcode"]
 
+# terminate subprocesses as well
 def signal_handler(signal, frame):
     print "Exiting"
     api_pool.terminate()
     processing_pool.terminate()
     sys.exit(0)
 
+# make the api call (async call)
 def process_person(name, person_id):
     print "Fetching data for", name
     # fetch data from api
     contributions = td.contributions(cycle='2012', recipient_ft = name)
     return person_id, contributions
 
+# Back to main process, treat the data (in other processes)
 def api_callback(api_out):
     person_id, contributions = api_out
-    processing_pool.apply_async(process_api_data, [person_id, contributions, out_data_queue, funding_sources_id, lock, cont_interesting_keys])
+    processing_pool.apply_async(process_api_data, args=(person_id, contributions, out_data_queue, funding_sources_id, lock, cont_interesting_keys,))
 
 def process_api_data(person_id, contributions, out_data_queue, funding_sources_id, lock, contributor_keys):
     contributors_id = []
@@ -71,7 +74,7 @@ funding_sources_id = [] # funding source ids (for tracking in this script)
 
 count = 0
 MAX_COUNT = 10000
-num_processes = 4
+num_processes = 8
 
 signal.signal(signal.SIGTERM, signal_handler)
 
@@ -81,7 +84,7 @@ api_pool = multiprocessing.Pool(processes=num_processes)
 processing_pool = multiprocessing.Pool(processes=num_processes)
 person_queue = manager.Queue()
 out_data_queue = manager.Queue()
-lock = multiprocessing.Lock()
+lock = manager.Lock()
 
 with open('contributors.json', 'w') as contf:
     with open('contributions.json', 'w') as matchf:
@@ -90,7 +93,7 @@ with open('contributors.json', 'w') as contf:
             if count < MAX_COUNT:
                 count += 1
                 name = person['person']['firstname'] + ' ' + person['person']['lastname']
-                api_pool.apply_async(process_person, [name, person['person']['id']], callback=api_callback)
+                api_pool.apply_async(process_person, args=(name, person['person']['id'],), callback=api_callback)
         # Close pool and wait for processes to finish
         api_pool.close()
         api_pool.join()
@@ -100,7 +103,8 @@ with open('contributors.json', 'w') as contf:
         while not out_data_queue.empty():
             out_data = out_data_queue.get()
             matches.append(out_data['match'])
-            funding_sources += out_data['source']
+            if not len(out_data['source']) == 0:
+                funding_sources.append(out_data['source'])
 
         matchf.write(simplejson.dumps(matches, indent=4, sort_keys=False))
         contf.write(simplejson.dumps(funding_sources, indent=4, sort_keys=True))
