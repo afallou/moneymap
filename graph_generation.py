@@ -35,3 +35,5 @@ def generateGraph():
     with open('recipients_graph.json', 'w') as rf:
         rf.write(simplejson.dumps({"nodes": nodes, "links": links}, indent=4))
         
+if __name__ == "__main__":
+    generateGraph()
