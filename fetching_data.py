@@ -11,7 +11,7 @@ td = TransparencyData('4df4c44769f4411a982d024313deb894')
 api = InfluenceExplorer('4df4c44769f4411a982d024313deb894')
 
 # keys we get for a contributor
-cont_interesting_keys = ["contributor_address",
+contributor_keys = ["contributor_address",
                         "contributor_category",
                         "contributor_city",
                         "contributor_employer",
@@ -22,6 +22,10 @@ cont_interesting_keys = ["contributor_address",
                         "contributor_state",
                         "contributor_type",
                         "contributor_zipcode"]
+
+contribution_keys = ["contributor_ext_id",
+                    "amount",
+                    "transaction_type_description"]
 
 # terminate subprocesses as well
 def signal_handler(signal, frame):
@@ -40,13 +44,16 @@ def process_person(name, person_id):
 # Back to main process, treat the data (in other processes)
 def api_callback(api_out):
     person_id, contributions = api_out
-    processing_pool.apply_async(process_api_data, args=(person_id, contributions, out_data_queue, funding_sources_id, lock, cont_interesting_keys,))
+    processing_pool.apply(process_api_data, args=(person_id, contributions, out_data_queue, funding_sources_id, lock, contributor_keys, contribution_keys,))
 
-def process_api_data(person_id, contributions, out_data_queue, funding_sources_id, lock, contributor_keys):
+def process_api_data(person_id, contributions, out_data_queue, funding_sources_id, lock, contributor_keys, contribution_keys):
     contributors_id = []
     source = {}
     for contribution in contributions:
-        contributors_id.append(contribution['contributor_ext_id'])
+        contribution_fields = {}
+        for key in contribution_keys:
+            contribution_fields[key] = contribution[key]
+        contributors_id.append(contribution_fields)
         # We've haven't seen this funding source before
         lock.acquire()
         if not contribution['contributor_ext_id'] in funding_sources_id:
@@ -60,51 +67,52 @@ def process_api_data(person_id, contributions, out_data_queue, funding_sources_i
     match = {'recipient_id': person_id, 'contributors': contributors_id }
     out_data_queue.put({'match': match, 'source': source})
 
+if __name__ == "__main__":
+    f = open('congress_full.json', 'r')
+    congress_data = json.load(f)
+    f.close()
 
-f = open('congress_full.json', 'r')
-congress_data = json.load(f)
-f.close()
-
-funding_reps = {}
-funding_senate = {}
-funding_sources = [] # matchup {person_id: [support_id, support_id...]}
-supports = [] # funding source full gamut (for json)
-funding_sources_id = [] # funding source ids (for tracking in this script)
+    funding_reps = {}
+    funding_senate = {}
+    funding_sources = [] # matchup {person_id: [support_id, support_id...]}
+    supports = [] # funding source full gamut (for json)
+    funding_sources_id = [] # funding source ids (for tracking in this script)
 
 
-count = 0
-MAX_COUNT = 10000
-num_processes = 8
+    count = 0
+    MAX_COUNT = 10000
+    num_api_processes = 12
+    num_treatment_processes = 4
 
-signal.signal(signal.SIGTERM, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
 
-# multiprocessing stuff
-manager = multiprocessing.Manager()
-api_pool = multiprocessing.Pool(processes=num_processes)
-processing_pool = multiprocessing.Pool(processes=num_processes)
-person_queue = manager.Queue()
-out_data_queue = manager.Queue()
-lock = manager.Lock()
+    # multiprocessing stuff
+    manager = multiprocessing.Manager()
+    api_pool = multiprocessing.Pool(processes=num_api_processes)
+    processing_pool = multiprocessing.Pool(processes=num_treatment_processes)
+    person_queue = manager.Queue()
+    out_data_queue = manager.Queue()
+    lock = manager.Lock()
 
-with open('contributors.json', 'w') as contf:
-    with open('contributions.json', 'w') as matchf:
-        matches = []
-        for person in congress_data['objects']:
-            if count < MAX_COUNT:
-                count += 1
-                name = person['person']['firstname'] + ' ' + person['person']['lastname']
-                api_pool.apply_async(process_person, args=(name, person['person']['id'],), callback=api_callback)
-        # Close pool and wait for processes to finish
-        api_pool.close()
-        api_pool.join()
-        processing_pool.close()
-        processing_pool.join()
+    with open('contributors.json', 'w') as contf:
+        with open('contributions.json', 'w') as matchf:
+            matches = []
+            for person in congress_data['objects']:
+                if count < MAX_COUNT:
+                    count += 1
+                    name = person['person']['firstname'] + ' ' + person['person']['lastname']
+                    api_pool.apply_async(process_person, args=(name, person['person']['id'],), callback=api_callback)
+            # Close pool and wait for processes to finish
+            api_pool.close()
+            api_pool.join()
+            processing_pool.close()
+            processing_pool.join()
 
-        while not out_data_queue.empty():
-            out_data = out_data_queue.get()
-            matches.append(out_data['match'])
-            if not len(out_data['source']) == 0:
-                funding_sources.append(out_data['source'])
+            while not out_data_queue.empty():
+                out_data = out_data_queue.get()
+                matches.append(out_data['match'])
+                if not len(out_data['source']) == 0:
+                    funding_sources.append(out_data['source'])
 
-        matchf.write(simplejson.dumps(matches, indent=4, sort_keys=False))
-        contf.write(simplejson.dumps(funding_sources, indent=4, sort_keys=True))
+            matchf.write(simplejson.dumps(matches, indent=4, sort_keys=False))
+            contf.write(simplejson.dumps(funding_sources, indent=4, sort_keys=True))
