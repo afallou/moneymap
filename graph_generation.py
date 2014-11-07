@@ -9,7 +9,7 @@ THIRD = ''
 
 def loadData():
     data = {}
-    with open('contributions.json') as contributions:
+    with open('contributions_small.json') as contributions:
         data = json.load(contributions)
     return data
 
@@ -22,11 +22,12 @@ def generateGraph():
         pid = contribution["recipient_id"]
         nodes.append({"id": pid})
         for contributor in contribution["contributors"]:
-            if contributor in sources.keys():
-                if not pid in sources[contributor]:
-                    sources[contributor].append(pid)
+            cid = contributor["contributor_ext_id"]
+            if cid in sources.keys():
+                if not pid in sources[cid]:
+                    sources[cid].append(pid)
             else:
-                sources[contributor] = [pid]
+                sources[cid] = [pid]
     links = []
     for contributor, recipients in sources.iteritems():
         for i in xrange(len(recipients)):
