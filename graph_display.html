@@ -21,34 +21,37 @@ var width = 1200,
     height = 550;
 
 var color = d3.scale.category20();
-
+console.log('made it to force')
 var force = d3.layout.force()
     .charge(-120)
     .linkDistance(30)
+    .linkStrength(0.1)
     .size([width, height]);
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
-
+console.log('before tooltip')
 var tooltip = d3.select("body")
   .append("div")
   .style("position", "absolute")
   .style("z-index", "10")
   .style("visibility", "visible")
   .text("a simple tooltip");
-
-d3.json("miserables.json", function(error, graph) {
+console.log('before d3json')
+// recipients_graph_test.json
+// miserables.json
+d3.json("recipients_graph_test.json", function(error, graph) {
   force
       .nodes(graph.nodes)
       .links(graph.links)
       .start();
-
   var link = svg.selectAll(".link")
       .data(graph.links)
     .enter().append("line")
       .attr("class", "link")
-      .style("stroke-width", function(d) { return Math.sqrt(d.value); });
+      .style("stroke-width", function(d) {
+       return Math.sqrt(d.value); });
 
   var node = svg.selectAll(".node")
       .data(graph.nodes)
@@ -61,9 +64,11 @@ d3.json("miserables.json", function(error, graph) {
       //}
       .on("mouseover", function(d){
         tooltip.text(d.name)
+        console.log('mouseover')
         return tooltip.style("visibility", "visible");
       })
       .on("mouseout", function(d){
+        console.log('mouseout')        
         return tooltip.style("visibility", "hidden");
       })      
       .on("mousemove", function(){

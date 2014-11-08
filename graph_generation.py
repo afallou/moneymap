@@ -18,7 +18,7 @@ def create_recipients_list(contributions):
     nodes = []
     for contribution in contributions:
         pid = contribution["recipient_id"]
-        nodes.append({"id": pid})
+        nodes.append({"name": str(pid)})
         for contributor in contribution["contributors"]:
             cid = contributor["contributor_ext_id"]
             if cid in sources:
@@ -28,25 +28,36 @@ def create_recipients_list(contributions):
                 sources[cid] = [pid]
     return sources, nodes
 
-def create_edges(sources):
+def create_edges(sources, nodes):
     edges = []
-    edge_checks = {}
+    edge_checks = set()
+    cnt = 0
     for contributor, recipients in sources.iteritems():
+        cnt += 1
+        print cnt
         for i in xrange(len(recipients)):
             for j in xrange(i + 1, len(recipients)):
-                edge ={"source": recipients[i], "target": recipients[j]}
-                edge_tuple = frozenset([recipients[i], recipients[j]])
+                for k in range(len(nodes)):
+                    if str(recipients[i]) == nodes[k]['name']:
+                        src = k
+                    if str(recipients[j]) == nodes[k]['name']:
+                        dst = k
+
+                edge ={"source": src, "target": dst, "value": 1}
+                edge_tuple = frozenset((src, dst))
                 if not edge_tuple in edge_checks:
                     edges.append(edge)
-                    edge_checks[edge_tuple] = 1
+                    edge_checks.add(edge_tuple)
     return edges                
 
 def generate_graph():
     contributions = load_data()
     sources, nodes = create_recipients_list(contributions)
-    edges = create_edges(sources)
-    with open('recipients_graph.json', 'w') as rf:
+    print "done nodes"
+    edges = create_edges(sources, nodes)
+    with open('recipients_graph_test_large.json', 'w') as rf:
         rf.write(simplejson.dumps({"nodes": nodes, "links": edges}, indent=4))
+    return nodes
         
 if __name__ == "__main__":
-    generate_graph()
+    n = generate_graph()
