@@ -30,10 +30,15 @@ def create_recipients_list(contributions):
 
 def create_edges(sources):
     edges = []
+    edge_checks = {}
     for contributor, recipients in sources.iteritems():
         for i in xrange(len(recipients)):
             for j in xrange(i + 1, len(recipients)):
-                edges.append( {"source": recipients[i], "target": recipients[j]} )
+                edge ={"source": recipients[i], "target": recipients[j]}
+                edge_tuple = frozenset([recipients[i], recipients[j]])
+                if not edge_tuple in edge_checks:
+                    edges.append(edge)
+                    edge_checks[edge_tuple] = 1
     return edges                
 
 def generate_graph():
