@@ -7,6 +7,11 @@ DEMOCRAT = ''
 INDEPENDENT = ''
 THIRD = ''
 
+# See contributions_type.txt to see all different types.
+contribution_type = 'Independent Expenditure For'
+out_file_name = 'recipients_graph_independent_for.json'
+file_initial_comment = "Graph generated with 'Independent Expenditure For' contributions"
+
 def load_data():
     data = {}
     with open('contributions.json') as contributions:
@@ -20,12 +25,13 @@ def create_recipients_list(contributions):
         pid = contribution["recipient_id"]
         nodes.append({"id": pid})
         for contributor in contribution["contributors"]:
-            cid = contributor["contributor_ext_id"]
-            if cid in sources:
-                if not pid in sources[cid]:
-                    sources[cid].append(pid)
-            else:
-                sources[cid] = [pid]
+            if contribution["transaction_type_description"] == contribution_type
+                cid = contributor["contributor_ext_id"]
+                if cid in sources:
+                    if not pid in sources[cid]:
+                        sources[cid].append(pid)
+                else:
+                    sources[cid] = [pid]
     return sources, nodes
 
 def create_edges(sources):
@@ -45,7 +51,7 @@ def generate_graph():
     contributions = load_data()
     sources, nodes = create_recipients_list(contributions)
     edges = create_edges(sources)
-    with open('recipients_graph.json', 'w') as rf:
+    with open(out_file_name, 'w') as rf:
         rf.write(simplejson.dumps({"nodes": nodes, "links": edges}, indent=4))
         
 if __name__ == "__main__":
