@@ -13,12 +13,22 @@ def load_data():
         data = json.load(contributions)
     return data
 
-def create_recipients_list(contributions):
+def get_candidate_info():
+    data = {}
+    with open('congress_full.json') as congress:
+        data = json.load(congress)
+    people_data = {}
+    for candidate in data['objects']:
+        cand_info = candidate['person']
+        people_data[cand_info['id']] = [cand_info['firstname'],  cand_info['lastname'], candidate['party']]
+    return people_data
+
+def create_recipients_list(contributions, candidate_info):
     sources = {}
     nodes = []
     for contribution in contributions:
         pid = contribution["recipient_id"]
-        nodes.append({"name": str(pid)})
+        nodes.append({"id": str(pid), "name": (candidate_info[pid][0] + ' ' + candidate_info[pid][1]).encode('ascii', 'ignore'), "group": candidate_info[pid][2].encode('ascii','ignore')})
         for contributor in contribution["contributors"]:
             cid = contributor["contributor_ext_id"]
             if cid in sources:
@@ -31,7 +41,7 @@ def create_recipients_list(contributions):
 def create_edges(sources, nodes):
     edges = []
     edge_checks = set()
-    int_nodes = [int(k['name']) for k in nodes]
+    int_nodes = [int(k['id']) for k in nodes]
     int_nodes_dict = {}
     for i in range(len(int_nodes)):
         int_nodes_dict[int_nodes[i]] = i
@@ -43,11 +53,6 @@ def create_edges(sources, nodes):
         cnt += 1
         for i in xrange(len(recipients)):
             for j in xrange(i + 1, len(recipients)):
-                #for k in range(len(int_nodes)):
-                #    if recipients[i] == int_nodes[k]:
-                #        src = k
-                #    if recipients[j] == int_nodes[k]:
-                #        dst = k
                 src = int_nodes_dict[recipients[i]]
                 dst = int_nodes_dict[recipients[j]]
                 edge ={"source": src, "target": dst, "value": 1}
@@ -59,11 +64,12 @@ def create_edges(sources, nodes):
 
 def generate_graph():
     contributions = load_data()
-    sources, nodes = create_recipients_list(contributions)
+    candidate_info = get_candidate_info()
+    sources, nodes = create_recipients_list(contributions, candidate_info)
     print "done nodes"
     edges = create_edges(sources, nodes)
     print 'done edges'
-    with open('recipients_graph_test_large.json', 'w') as rf:
+    with open('recipients_graph_test_large_sparse.json', 'w') as rf:
         rf.write(simplejson.dumps({"nodes": nodes, "links": edges}, indent=4))
     return nodes
         
