@@ -31,17 +31,25 @@ def create_recipients_list(contributions):
 def create_edges(sources, nodes):
     edges = []
     edge_checks = set()
+    int_nodes = [int(k['name']) for k in nodes]
+    int_nodes_dict = {}
+    for i in range(len(int_nodes)):
+        int_nodes_dict[int_nodes[i]] = i
+    l = len(sources)
+    print l
     cnt = 0
     for contributor, recipients in sources.iteritems():
+        print str(cnt)+ '/' + str(l)
         cnt += 1
-        print cnt
         for i in xrange(len(recipients)):
             for j in xrange(i + 1, len(recipients)):
-                for k in range(len(nodes)):
-                    if str(recipients[i]) == nodes[k]['name']:
-                        src = k
-                    if str(recipients[j]) == nodes[k]['name']:
-                        dst = k
+                #for k in range(len(int_nodes)):
+                #    if recipients[i] == int_nodes[k]:
+                #        src = k
+                #    if recipients[j] == int_nodes[k]:
+                #        dst = k
+                src = int_nodes_dict[recipients[i]]
+                dst = int_nodes_dict[recipients[j]]
                 edge ={"source": src, "target": dst, "value": 1}
                 edge_tuple = frozenset((src, dst))
                 if not edge_tuple in edge_checks:
@@ -54,6 +62,7 @@ def generate_graph():
     sources, nodes = create_recipients_list(contributions)
     print "done nodes"
     edges = create_edges(sources, nodes)
+    print 'done edges'
     with open('recipients_graph_test_large.json', 'w') as rf:
         rf.write(simplejson.dumps({"nodes": nodes, "links": edges}, indent=4))
     return nodes

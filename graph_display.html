@@ -17,14 +17,14 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-var width = 1200,
-    height = 550;
+var width = 2400,
+    height = 1100;
 
 var color = d3.scale.category20();
 console.log('made it to force')
 var force = d3.layout.force()
-    .charge(-120)
-    .linkDistance(30)
+    .charge(-50)
+    .linkDistance(20)
     .linkStrength(0.1)
     .size([width, height]);
 
@@ -41,7 +41,7 @@ var tooltip = d3.select("body")
 console.log('before d3json')
 // recipients_graph_test.json
 // miserables.json
-d3.json("recipients_graph_test.json", function(error, graph) {
+d3.json("recipients_graph_test_large.json", function(error, graph) {
   force
       .nodes(graph.nodes)
       .links(graph.links)
