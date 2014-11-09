@@ -42,7 +42,6 @@ def create_edges(sources, nodes):
                         src = k
                     if str(recipients[j]) == nodes[k]['name']:
                         dst = k
-
                 edge ={"source": src, "target": dst, "value": 1}
                 edge_tuple = frozenset((src, dst))
                 if not edge_tuple in edge_checks:
