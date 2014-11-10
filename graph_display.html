@@ -21,8 +21,9 @@ var width = 2400,
     height = 1100;
 
 var color = d3.scale.ordinal()
-  .domain(["Republican", "Democrat", "Independent"])
+  .domain(["R","D","I"])
   .range(["#e91d0e", "#232066", "#ffff00"]);
+  //.domain(["Republican", "Democrat", "Independent"])
 
 var force = d3.layout.force()
     .charge(-50)
@@ -33,17 +34,19 @@ var force = d3.layout.force()
 var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
-console.log('before tooltip')
 var tooltip = d3.select("body")
   .append("div")
   .style("position", "absolute")
   .style("z-index", "10")
   .style("visibility", "visible")
   .text("a simple tooltip");
-console.log('before d3json')
 // recipients_graph_test.json
 // miserables.json
-d3.json("recipients_graph_test_sparse_large.json", function(error, graph) {
+d3.json("senate_graph_2012_2013_neg.json", function(error, graph) {
+  // graph.links.forEach(function(d,i){
+
+  // })
+  //console.log(links)
   force
       .nodes(graph.nodes)
       .links(graph.links)
@@ -60,18 +63,10 @@ d3.json("recipients_graph_test_sparse_large.json", function(error, graph) {
     .enter().append("circle")
       .attr("class", "node")
       .attr("r", 5)
-      .style("fill", function(d) {
-        /*if(d.group == "Republican"){
-          return '#e91d0e';
-        }
-        else if(d.group = "Democrat"){
-          return '#232066';
-        }
-        else{
-          return '#d3d3d3';
-        }*/
-        return color(d.group);
-      })
+      // .style("fill", function(d) {
+      //   //return color(d.group);
+      //   return color(d.party);
+      // })
       //.on("click", function(d) { 
       // console.log('clicked!');
       //  console.log(d.name);
@@ -86,7 +81,7 @@ d3.json("recipients_graph_test_sparse_large.json", function(error, graph) {
       .on("mousemove", function(){
         return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+10)+"px");
       })
-      .style("fill", function(d) { return color(d.group); })
+      .style("fill", function(d) { return color(d.party/*d.group*/); })
       .call(force.drag);
 
   //node.append("title")
