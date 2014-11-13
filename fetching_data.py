@@ -35,10 +35,17 @@ def signal_handler(signal, frame):
     sys.exit(0)
 
 # make the api call (async call)
-def process_person(name, person_id):
+def process_person(names, person_id):
+    name = names['firstname'] + ' ' + names['lastname']
     print "Fetching data for", name
     # fetch data from api
     contributions = td.contributions(cycle='2012', recipient_ft = name)
+    if len(contributions) == 0:
+        if len(names['nickname']) > 0:
+            name = names['nickname'] + ' ' + names['lastname']
+            contributions = td.contributions(cycle='2012', recipient_ft = name)
+        else:
+            nodata_queue.put(name)
     return person_id, contributions
 
 # Back to main process, treat the data (in other processes)
@@ -90,29 +97,35 @@ if __name__ == "__main__":
     manager = multiprocessing.Manager()
     api_pool = multiprocessing.Pool(processes=num_api_processes)
     processing_pool = multiprocessing.Pool(processes=num_treatment_processes)
-    person_queue = manager.Queue()
+    nodata_queue = manager.Queue()
     out_data_queue = manager.Queue()
     lock = manager.Lock()
 
-    with open('contributors.json', 'w') as contf:
+   
+    matches = []
+    for person in congress_data['objects']:
+        if count < MAX_COUNT:
+            count += 1
+            names = {'firstname': person['person']['firstname'], 'lastname': person['person']['lastname'], 'nickname': person['person']['nickname']} 
+            api_pool.apply_async(process_person, args=(names, person['person']['id'],), callback=api_callback)
+    # Close pool and wait for processes to finish
+    api_pool.close()
+    api_pool.join()
+    processing_pool.close()
+    processing_pool.join()
+
+    with open('nodata_names.txt', 'w') as nodt:
+        while not nodata_queue.empty():
+            name = nodata_queue.get()
+            nodt.write(name)
+
+    while not out_data_queue.empty():
+        out_data = out_data_queue.get()
+        matches.append(out_data['match'])
+        if not len(out_data['source']) == 0:
+            funding_sources.append(out_data['source'])
+ 
+ with open('contributors.json', 'w') as contf:
         with open('contributions.json', 'w') as matchf:
-            matches = []
-            for person in congress_data['objects']:
-                if count < MAX_COUNT:
-                    count += 1
-                    name = person['person']['firstname'] + ' ' + person['person']['lastname']
-                    api_pool.apply_async(process_person, args=(name, person['person']['id'],), callback=api_callback)
-            # Close pool and wait for processes to finish
-            api_pool.close()
-            api_pool.join()
-            processing_pool.close()
-            processing_pool.join()
-
-            while not out_data_queue.empty():
-                out_data = out_data_queue.get()
-                matches.append(out_data['match'])
-                if not len(out_data['source']) == 0:
-                    funding_sources.append(out_data['source'])
-
             matchf.write(simplejson.dumps(matches, indent=4, sort_keys=False))
             contf.write(simplejson.dumps(funding_sources, indent=4, sort_keys=True))

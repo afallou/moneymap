@@ -9,10 +9,13 @@ if __name__ == "__main__":
     with open('contributions.json') as c:
         contributions = json.load(c)
         for recipient in contributions:
-            for contribution in recipient["contributors"]:
-                total_sum += float(contribution["amount"])
-                reasons[contribution["transaction_type_description"]] += 1
-                reason_sums[contribution["transaction_type_description"]] += float(contribution["amount"])
+            # Obama: 400629
+            # Biden: 300008
+            if recipient["recipient_id"] != 400629 and recipient["recipient_id"] != 300008:
+                for contribution in recipient["contributors"]:
+                    total_sum += float(contribution["amount"])
+                    reasons[contribution["transaction_type_description"]] += 1
+                    reason_sums[contribution["transaction_type_description"]] += float(contribution["amount"])
 
     print 'Total sum: %e' % total_sum
     print "Total count:", sum(reasons.values())
