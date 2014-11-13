@@ -116,6 +116,7 @@ if __name__ == "__main__":
 
     with open('nodata_names.txt', 'w') as nodt:
         while not nodata_queue.empty():
+            print "no data for", name
             name = nodata_queue.get()
             nodt.write(name)
 
@@ -125,7 +126,7 @@ if __name__ == "__main__":
         if not len(out_data['source']) == 0:
             funding_sources.append(out_data['source'])
  
- with open('contributors.json', 'w') as contf:
+    with open('contributors.json', 'w') as contf:
         with open('contributions.json', 'w') as matchf:
             matchf.write(simplejson.dumps(matches, indent=4, sort_keys=False))
             contf.write(simplejson.dumps(funding_sources, indent=4, sort_keys=True))
