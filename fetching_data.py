@@ -22,11 +22,14 @@ contribution_keys = ["contributor_ext_id",
                     "amount",
                     "transaction_type_description"]
 
+multiprocessing_treatment = False
+
 # terminate subprocesses as well
 def signal_handler(signal, frame):
     print "Exiting"
     api_pool.terminate()
-    processing_pool.terminate()
+    if multiprocessing_treatment:
+        processing_pool.terminate()
     sys.exit(0)
 
 # make the api call (async call)
@@ -46,7 +49,10 @@ def process_person(names, person_id):
 # Back to main process, treat the data (in other processes)
 def api_callback(api_out):
     person_id, contributions = api_out
-    processing_pool.apply(process_api_data, args=(person_id, contributions, out_data_queue, funding_sources_id, lock, contributor_keys, contribution_keys,))
+    if multiprocessing_treatment:
+        processing_pool.apply(process_api_data, args=(person_id, contributions, out_data_queue, funding_sources_id, lock, contributor_keys, contribution_keys,))
+    else:
+        process_api_data(person_id, contributions, out_data_queue, funding_sources_id, lock, contributor_keys, contribution_keys)
 
 def process_api_data(person_id, contributions, out_data_queue, funding_sources_id, lock, contributor_keys, contribution_keys):
     contributors_id = []
@@ -58,14 +64,13 @@ def process_api_data(person_id, contributions, out_data_queue, funding_sources_i
             contribution_fields[key] = contribution[key]
         contributors_id.append(contribution_fields)
         # We've haven't seen this funding source before
-        lock.acquire()
-        if not contribution['contributor_ext_id'] in funding_sources_id:
-            funding_sources_id.append(contribution['contributor_ext_id'])
-            # add source to our dict
-            for key in contributor_keys:
-                source[key] = contribution[key]
-            sources.append(source)
-        lock.release()
+        with lock:
+            if not contribution['contributor_ext_id'] in funding_sources_id:
+                funding_sources_id.add(contribution['contributor_ext_id'])
+                # add source to our dict
+                for key in contributor_keys:
+                    source[key] = contribution[key]
+                sources.append(source)
     match = {'recipient_id': person_id, 'contributors': contributors_id }
     out_data_queue.put({'match': match, 'sources': sources})
 
@@ -78,11 +83,11 @@ if __name__ == "__main__":
     funding_senate = {}
     funding_sources = [] # matchup {person_id: [support_id, support_id...]}
     supports = [] # funding source full gamut (for json)
-    funding_sources_id = [] # funding source ids (for tracking in this script)
+    funding_sources_id = set() # funding source ids (for tracking in this script)
 
 
     count = 0
-    MAX_COUNT = 10
+    MAX_COUNT = 10000
     num_api_processes = 12
     num_treatment_processes = 4
 
@@ -91,7 +96,8 @@ if __name__ == "__main__":
     # multiprocessing stuff
     manager = multiprocessing.Manager()
     api_pool = multiprocessing.Pool(processes=num_api_processes)
-    processing_pool = multiprocessing.Pool(processes=num_treatment_processes)
+    if multiprocessing_treatment:
+        processing_pool = multiprocessing.Pool(processes=num_treatment_processes)
     nodata_queue = manager.Queue()
     out_data_queue = manager.Queue()
     lock = manager.Lock()
@@ -106,15 +112,18 @@ if __name__ == "__main__":
     # Close pool and wait for processes to finish
     api_pool.close()
     api_pool.join()
-    processing_pool.close()
-    processing_pool.join()
+    if multiprocessing_treatment:
+        processing_pool.close()
+        processing_pool.join()
 
+    print "Trying to get extra data"
     with open('nodata_names.txt', 'w') as nodt:
         while not nodata_queue.empty():
             print "no data for", name
             name = nodata_queue.get()
             nodt.write(name)
 
+    print "Extend ouputs"
     while not out_data_queue.empty():
         "not empty"
         out_data = out_data_queue.get()
