@@ -5,23 +5,18 @@ from influenceexplorer import InfluenceExplorer
 import multiprocessing
 import signal
 import sys
+import pdb
 
 
 td = TransparencyData('4df4c44769f4411a982d024313deb894')
 api = InfluenceExplorer('4df4c44769f4411a982d024313deb894')
 
 # keys we get for a contributor
-contributor_keys = ["contributor_address",
-                        "contributor_category",
-                        "contributor_city",
-                        "contributor_employer",
-                        "contributor_ext_id",
-                        "contributor_gender",
-                        "contributor_name",
-                        "contributor_occupation",
-                        "contributor_state",
-                        "contributor_type",
-                        "contributor_zipcode"]
+contributor_keys = [
+                    "contributor_ext_id",
+                    "contributor_name",
+                    "contributor_type"
+                    ]
 
 contribution_keys = ["contributor_ext_id",
                     "amount",
@@ -55,8 +50,9 @@ def api_callback(api_out):
 
 def process_api_data(person_id, contributions, out_data_queue, funding_sources_id, lock, contributor_keys, contribution_keys):
     contributors_id = []
-    source = {}
+    sources = []
     for contribution in contributions:
+        source = {}
         contribution_fields = {}
         for key in contribution_keys:
             contribution_fields[key] = contribution[key]
@@ -65,14 +61,13 @@ def process_api_data(person_id, contributions, out_data_queue, funding_sources_i
         lock.acquire()
         if not contribution['contributor_ext_id'] in funding_sources_id:
             funding_sources_id.append(contribution['contributor_ext_id'])
-            lock.release()
             # add source to our dict
             for key in contributor_keys:
                 source[key] = contribution[key]
-        else:
-            lock.release()
+            sources.append(source)
+        lock.release()
     match = {'recipient_id': person_id, 'contributors': contributors_id }
-    out_data_queue.put({'match': match, 'source': source})
+    out_data_queue.put({'match': match, 'sources': sources})
 
 if __name__ == "__main__":
     f = open('congress_full.json', 'r')
@@ -87,7 +82,7 @@ if __name__ == "__main__":
 
 
     count = 0
-    MAX_COUNT = 10000
+    MAX_COUNT = 10
     num_api_processes = 12
     num_treatment_processes = 4
 
@@ -121,10 +116,11 @@ if __name__ == "__main__":
             nodt.write(name)
 
     while not out_data_queue.empty():
+        "not empty"
         out_data = out_data_queue.get()
         matches.append(out_data['match'])
-        if not len(out_data['source']) == 0:
-            funding_sources.append(out_data['source'])
+        if not len(out_data['sources']) == 0:
+            funding_sources.extend(out_data['sources'])
  
     with open('contributors.json', 'w') as contf:
         with open('contributions.json', 'w') as matchf:
