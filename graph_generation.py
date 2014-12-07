@@ -7,9 +7,9 @@ DEMOCRAT = ''
 INDEPENDENT = ''
 THIRD = ''
 
-def load_data():
+def load_data(filename):
     data = {}
-    with open('contributions.json') as contributions:
+    with open(filename) as contributions:
         data = json.load(contributions)
     return data
 
@@ -28,7 +28,10 @@ def create_recipients_list(contributions, candidate_info):
     nodes = []
     for contribution in contributions:
         pid = contribution["recipient_id"]
-        nodes.append({"id": str(pid), "name": (candidate_info[pid][0] + ' ' + candidate_info[pid][1]).encode('ascii', 'ignore'), "group": candidate_info[pid][2].encode('ascii','ignore')})
+        nodes.append({"id": str(pid), 
+                      "name": (candidate_info[pid][0] + ' ' + candidate_info[pid][1]).encode('ascii', 'ignore'), 
+                      "group": candidate_info[pid][2].encode('ascii','ignore')
+                      })
         for contributor in contribution["contributors"]:
             cid = contributor["contributor_ext_id"]
             if cid in sources:
@@ -41,10 +44,12 @@ def create_recipients_list(contributions, candidate_info):
 def create_edges(sources, nodes):
     edges = []
     edge_checks = set()
-    int_nodes = [int(k['id']) for k in nodes]
+    node_ids = [n['id'] for n in nodes]
     int_nodes_dict = {}
-    for i in range(len(int_nodes)):
-        int_nodes_dict[int_nodes[i]] = i
+    i = 0
+    for nid in node_ids:
+        int_nodes_dict[nid] = i
+        i += 1
     l = len(sources)
     print l
     cnt = 0
@@ -63,7 +68,7 @@ def create_edges(sources, nodes):
     return edges                
 
 def generate_graph():
-    contributions = load_data()
+    contributions = load_data('contributions.json')
     candidate_info = get_candidate_info()
     sources, nodes = create_recipients_list(contributions, candidate_info)
     print "done nodes"
