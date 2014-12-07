@@ -9,6 +9,7 @@ import snap
 import os, os.path
 import sys
 from pprint import pprint
+import copy
 
 
 REPUBLICAN = ''
@@ -73,8 +74,9 @@ candidate_info = get_candidate_info()
 # Sources named gives all the people each contributor contributed to
 sources_ids, sources_named, nodes = create_recipients_list(contributions, contributors, candidate_info)
 
-
-
+surname_hashed_cand_info = {}
+for k,v in candidate_info.iteritems():
+	surname_hashed_cand_info[v[1].split(' ')[0].encode('ascii', 'ignore')] = [k, v[0], v[2]]
 
 
 
@@ -86,7 +88,7 @@ sources_ids, sources_named, nodes = create_recipients_list(contributions, contri
 # eventual vote of the bill and 
 
 def get_dirs():
-	path = 'congress/data/112/votes'
+	path = 'congress/data/113/votes'
 	yrs = os.listdir(path)
 
 	dirs_house = []
@@ -105,6 +107,7 @@ def get_dirs():
 def create_house_dict(dirs_house):
 	# create dictionary for all house members/votes
 	house_dict = {}
+	house_ids_names = {}
 	house_votes = []
 	cnt = 0	
 	#categories = []
@@ -137,11 +140,8 @@ def create_house_dict(dirs_house):
 				passed = 0
 				failed = 1
 			else:
-				print "bill recorded as neither passing nor failing"
-				print bill_info['result']
 				passed = 1
 				failed = 1
-			print data['votes'].keys()
 			ayes = data['votes']['Aye']
 			noes = data['votes']['No']
 			for j in range(len(ayes)):
@@ -151,6 +151,8 @@ def create_house_dict(dirs_house):
 				else:
 					house_dict[person_id][0] += passed
 					house_dict[person_id][1] += 1
+				if(person_id not in house_ids_names):
+					house_ids_names[person_id] = ayes[j]['display_name']
 			for j in range(len(noes)):
 				person_id = noes[j]['id']
 				if(person_id not in house_dict):
@@ -158,24 +160,78 @@ def create_house_dict(dirs_house):
 				else:
 					house_dict[person_id][0] += failed
 					house_dict[person_id][1] += 1
-
+				if(person_id not in house_ids_names):
+					house_ids_names[person_id] = noes[j]['display_name']
 		house_votes.append(bill_info)
 		
 		json_data.close()
 	
 
 	#print house_votes
-	return house_votes, house_dict
+	return house_votes, house_dict, house_ids_names
 
 
 dirs_house, dirs_senate = get_dirs()
 print "got dirs"
-house_votes, house_dict = create_house_dict(dirs_house)
+house_votes, house_dict, house_ids_names = create_house_dict(dirs_house)
 
-max_val = 0
-max_index = 0
+house_impact = {}
 for k,v in house_dict.iteritems():
-	if (((float(v[0]) / v[1]) > max_val) and (v[1] > 30)):
-		max_val = float(v[0])/v[1]
-		max_index = k
+	if(v[1] > 30):
+		house_impact[k] = float(v[0])/v[1]
 
+# TODO
+# Losing about 40 people in this due to overlapping surnames.
+id_to_id_dict = {}
+for k,v in house_ids_names.iteritems():
+	surname = v.split(' ')[0].split(',')[0].encode('ascii', 'ignore')
+	if(surname in surname_hashed_cand_info):
+		id_to_id_dict[surname_hashed_cand_info[surname][0]] = k
+		id_to_id_dict[k] = surname_hashed_cand_info[surname][0]
+# Gets 434 members but not:
+#Andrews
+#Watt 
+#Cantor
+#Radel 
+#Emerson 
+#Bonner
+#Gutierrez
+#A000210
+#W000207
+#C001046
+#R000596
+#E000172
+#B001244
+#G000535
+
+# Convert ids from one to the other
+sources_named_other_id = copy.deepcopy(sources_named)
+
+for contributor, contributions in sources_named.iteritems():
+	for contribution in contributions:
+		if(contribution in id_to_id_dict):
+			sources_named_other_id[contributor][id_to_id_dict[contribution]] = sources_named[contributor][contribution]
+		del sources_named_other_id[contributor][contribution]
+
+for contributor, contributions in sources_named_other_id.iteritems():
+	for contribution_id in contributions:
+		if(contribution_id in house_impact):
+			contributions[contribution_id] = [contributions[contribution_id], house_impact[contribution_id]]
+
+for contributor, contributions in sources_named_other_id.iteritems():
+	for contribution_id in contributions.keys():
+		if(contribution_id not in house_impact):
+			del contributions[contribution_id]
+
+# Calculate the weighted sum of impact based on amount
+# given to each politician and how correlated the 
+# politician was with the voting direction.
+coefficients = {}
+THRESHOLD = 10000
+for contributor, contributions in sources_named_other_id.iteritems():
+	total_spent = 0
+	for contribution in contributions:
+		total_spent += contributions[contribution][0]
+	if(total_spent > THRESHOLD):
+		tmp_vector = [v for k,v in sources_named_other_id[contributor].iteritems()]
+		coefficients[contributor] = sum(x[0]*x[1]/total_spent for x in tmp_vector)
