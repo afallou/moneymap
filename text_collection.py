@@ -3,12 +3,13 @@ import os, os.path
 import json
 import sys
 #for Neeloy
-sys.path.append("C:\\python27\\lib\\site-packages")
+#sys.path.append("C:\\python27\\lib\\site-packages")
 import simplejson
 import numpy as np
 import math
 import re
 from pyPdf import PdfFileReader
+import lda
 
 def get_vote_dirs(path,con):
 	# returns list of directories to all votes
@@ -89,7 +90,7 @@ def get_all_text(dirs, con):
 
 	return bills, text_of_bills
 
-path = 'congress/data'
+path = '../congress/data'
 
 con = 113
 
@@ -122,3 +123,11 @@ for bill in text_of_bills:
 	bill_number += 1
 	if(bill_number%100 == 0):
 		print bill_number
+
+model = lda.LDA(n_topics=20, n_iter=500, random_state=1)
+model.fit(X)
+topic_word = model.topic_word_  # model.components_ also works
+n_top_words = 8
+for i, topic_dist in enumerate(topic_word):
+	topic_words = np.array([i for i in set_of_words])[np.argsort(topic_dist)][:-n_top_words:-1]
+	print('Topic {}: {}'.format(i, ' '.join(topic_words)))
