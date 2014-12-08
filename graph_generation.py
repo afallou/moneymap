@@ -50,6 +50,8 @@ def create_edges(sources, nodes):
     for nid in node_ids:
         int_nodes_dict[nid] = i
         i += 1
+    with open('int_to_ids.json','w') as sf:
+        sf.write(simplejson.dumps(int_nodes_dict, indent=4))
     l = len(sources)
     print l
     cnt = 0

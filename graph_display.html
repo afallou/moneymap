@@ -17,8 +17,8 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-var width = 2400,
-    height = 1100;
+var width = 10000,
+    height = 5000;
 
 var color = d3.scale.ordinal()
   .domain(["R","D","I"])
@@ -42,7 +42,7 @@ var tooltip = d3.select("body")
   .text("a simple tooltip");
 // recipients_graph_test.json
 // miserables.json
-d3.json("http://localhost:8000/donor_graph_20k_thresh.json", function(error, graph) {
+d3.json("http://localhost:8000/donor_graph_20k_thresh_independent_expenditure_against.json", function(error, graph) {
   // graph.links.forEach(function(d,i){
 
   // })
