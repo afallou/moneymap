@@ -1,0 +1,1934 @@
+{
+    "400175": {
+        "name": "Jeb Hensarling",
+        "centrality": 1.7452659590066196e-07
+    },
+    "300051": {
+        "name": "Thomas Harkin",
+        "centrality": 5.387750891693236e-08
+    },
+    "300052": {
+        "name": "Orrin Hatch",
+        "centrality": 4.2912599068701656e-07
+    },
+    "300055": {
+        "name": "James Inhofe",
+        "centrality": 5.8553378631449526e-08
+    },
+    "300063": {
+        "name": "Mary Landrieu",
+        "centrality": 1.0617390036701534e-07
+    },
+    "300066": {
+        "name": "Carl Levin",
+        "centrality": 1.0030495047232767e-08
+    },
+    "300073": {
+        "name": "Barbara Mikulski",
+        "centrality": 2.2095094739045554e-08
+    },
+    "412378": {
+        "name": "Alan Franken",
+        "centrality": 3.583518149809752e-08
+    },
+    "409888": {
+        "name": "Bill Shuster",
+        "centrality": 1.1536376103927433e-07
+    },
+    "400432": {
+        "name": "Roger Wicker",
+        "centrality": 2.371589196398139e-07
+    },
+    "300081": {
+        "name": "John Reed",
+        "centrality": 2.6452103955607203e-08
+    },
+    "300083": {
+        "name": "Pat Roberts",
+        "centrality": 1.286931351700181e-07
+    },
+    "300088": {
+        "name": "Jefferson Sessions",
+        "centrality": 1.4712014092685474e-08
+    },
+    "300089": {
+        "name": "Richard Shelby",
+        "centrality": 4.405321793178816e-08
+    },
+    "412388": {
+        "name": "Tom Graves",
+        "centrality": 8.391100865718354e-08
+    },
+    "412011": {
+        "name": "John Campbell",
+        "centrality": 6.257128310151698e-08
+    },
+    "412396": {
+        "name": "Terri Sewell",
+        "centrality": 9.420817580857521e-08
+    },
+    "400185": {
+        "name": "Michael Honda",
+        "centrality": 5.9491064471683856e-08
+    },
+    "412399": {
+        "name": "David Schweikert",
+        "centrality": 1.2501330031626356e-07
+    },
+    "412402": {
+        "name": "Steve Womack",
+        "centrality": 7.473117885612945e-08
+    },
+    "400116": {
+        "name": "John Duncan",
+        "centrality": 6.457280970550597e-08
+    },
+    "412410": {
+        "name": "Daniel Webster",
+        "centrality": 9.742139403834945e-08
+    },
+    "412412": {
+        "name": "Frederica Wilson",
+        "centrality": 5.131600056887033e-08
+    },
+    "400128": {
+        "name": "Eni Faleomavaega",
+        "centrality": 4.87333159371535e-09
+    },
+    "400129": {
+        "name": "Sam Farr",
+        "centrality": 6.128799334615362e-08
+    },
+    "400130": {
+        "name": "Chaka Fattah",
+        "centrality": 5.4195416482123415e-08
+    },
+    "412186": {
+        "name": "Albio Sires",
+        "centrality": 5.322710165530023e-08
+    },
+    "412189": {
+        "name": "Jerry McNerney",
+        "centrality": 1.0056772725483533e-07
+    },
+    "412190": {
+        "name": "Kevin McCarthy",
+        "centrality": 3.4567334826224724e-07
+    },
+    "412193": {
+        "name": "Joe Courtney",
+        "centrality": 1.1822030099347401e-07
+    },
+    "412194": {
+        "name": "Christopher Murphy",
+        "centrality": 3.1137597873092505e-07
+    },
+    "412195": {
+        "name": "Kathy Castor",
+        "centrality": 9.969786403571172e-08
+    },
+    "400134": {
+        "name": "Jeff Flake",
+        "centrality": 1.6350041275431142e-06
+    },
+    "412199": {
+        "name": "Henry Johnson",
+        "centrality": 7.35636091318802e-08
+    },
+    "412200": {
+        "name": "Mazie Hirono",
+        "centrality": 1.9177394891297714e-07
+    },
+    "412202": {
+        "name": "Peter Roskam",
+        "centrality": 2.0047342815555955e-07
+    },
+    "412205": {
+        "name": "Joe Donnelly",
+        "centrality": 2.3797434587817913e-07
+    },
+    "412208": {
+        "name": "Bruce Braley",
+        "centrality": 1.5710649178172659e-07
+    },
+    "412209": {
+        "name": "David Loebsack",
+        "centrality": 1.2501447058457078e-07
+    },
+    "412211": {
+        "name": "John Yarmuth",
+        "centrality": 7.93126260295477e-08
+    },
+    "412212": {
+        "name": "John Sarbanes",
+        "centrality": -2.0865457606039413e-08
+    },
+    "412213": {
+        "name": "Tim Walberg",
+        "centrality": 9.36037141165912e-08
+    },
+    "412214": {
+        "name": "Timothy Walz",
+        "centrality": 1.0995091207192048e-07
+    },
+    "412215": {
+        "name": "Keith Ellison",
+        "centrality": 7.603324305876467e-08
+    },
+    "412216": {
+        "name": "Michele Bachmann",
+        "centrality": 5.4966124539386574e-08
+    },
+    "412217": {
+        "name": "Adrian Smith",
+        "centrality": 1.0801952633483179e-07
+    },
+    "412218": {
+        "name": "Dean Heller",
+        "centrality": 2.9722469312494677e-07
+    },
+    "412219": {
+        "name": "Carol Shea-Porter",
+        "centrality": 8.630428675655034e-08
+    },
+    "412221": {
+        "name": "Yvette Clarke",
+        "centrality": 5.725143006246849e-08
+    },
+    "412223": {
+        "name": "Kirsten Gillibrand",
+        "centrality": 2.932903290938975e-07
+    },
+    "412226": {
+        "name": "Jim Jordan",
+        "centrality": 8.980527346153102e-08
+    },
+    "412236": {
+        "name": "Steve Cohen",
+        "centrality": 7.65035989686219e-08
+    },
+    "412239": {
+        "name": "Peter Welch",
+        "centrality": 8.262723546955517e-08
+    },
+    "412242": {
+        "name": "Amy Klobuchar",
+        "centrality": 2.6072766499251385e-07
+    },
+    "412243": {
+        "name": "Claire McCaskill",
+        "centrality": 2.3843197512019516e-07
+    },
+    "412244": {
+        "name": "Jon Tester",
+        "centrality": 3.2248789503687564e-07
+    },
+    "400142": {
+        "name": "Rodney Frelinghuysen",
+        "centrality": 7.239586108103177e-08
+    },
+    "412246": {
+        "name": "Robert Casey",
+        "centrality": 2.7489732241773927e-07
+    },
+    "412247": {
+        "name": "Sheldon Whitehouse",
+        "centrality": 1.8912240513679175e-07
+    },
+    "412248": {
+        "name": "Bob Corker",
+        "centrality": 2.066919497322084e-07
+    },
+    "412250": {
+        "name": "Gus Bilirakis",
+        "centrality": 5.3543202270497844e-08
+    },
+    "412251": {
+        "name": "John Barrasso",
+        "centrality": 2.3082746995786963e-07
+    },
+    "412252": {
+        "name": "Paul Broun",
+        "centrality": 7.327997231679602e-08
+    },
+    "412254": {
+        "name": "Niki Tsongas",
+        "centrality": 9.242621522302566e-08
+    },
+    "412256": {
+        "name": "Robert Latta",
+        "centrality": 8.470328030118413e-08
+    },
+    "412257": {
+        "name": "Bill Foster",
+        "centrality": 9.907617014290362e-08
+    },
+    "412259": {
+        "name": "Jackie Speier",
+        "centrality": 7.403910864958307e-08
+    },
+    "412261": {
+        "name": "Steve Scalise",
+        "centrality": 1.0573767728278589e-07
+    },
+    "412263": {
+        "name": "Donna Edwards",
+        "centrality": 6.728975058241764e-08
+    },
+    "412269": {
+        "name": "Bill Cassidy",
+        "centrality": 9.88342659315615e-08
+    },
+    "412270": {
+        "name": "Jason Chaffetz",
+        "centrality": 6.611509376902681e-08
+    },
+    "412271": {
+        "name": "Mike Coffman",
+        "centrality": 1.4873118103977898e-07
+    },
+    "412275": {
+        "name": "John Fleming",
+        "centrality": 7.54674587343349e-08
+    },
+    "412276": {
+        "name": "Alan Grayson",
+        "centrality": 9.625927442078821e-08
+    },
+    "412278": {
+        "name": "Brett Guthrie",
+        "centrality": 1.3646950677185063e-07
+    },
+    "412280": {
+        "name": "Gregg Harper",
+        "centrality": 7.283389111525465e-08
+    },
+    "412281": {
+        "name": "Martin Heinrich",
+        "centrality": 2.3883459199953504e-07
+    },
+    "412283": {
+        "name": "Duncan Hunter",
+        "centrality": 9.429192661725337e-08
+    },
+    "412284": {
+        "name": "Lynn Jenkins",
+        "centrality": 1.4296095163586624e-07
+    },
+    "412286": {
+        "name": "Ann Kirkpatrick",
+        "centrality": 1.135069478637113e-07
+    },
+    "412290": {
+        "name": "Leonard Lance",
+        "centrality": 1.1067217768637936e-07
+    },
+    "412292": {
+        "name": "Blaine Luetkemeyer",
+        "centrality": 7.515605869683802e-08
+    },
+    "412294": {
+        "name": "Cynthia Lummis",
+        "centrality": 6.241743043488211e-08
+    },
+    "412295": {
+        "name": "Tom McClintock",
+        "centrality": 2.5285984528152995e-08
+    },
+    "400010": {
+        "name": "Spencer Bachus",
+        "centrality": 1.7657778367617456e-07
+    },
+    "400013": {
+        "name": "Tammy Baldwin",
+        "centrality": 1.9812312955295264e-07
+    },
+    "412302": {
+        "name": "Pete Olson",
+        "centrality": 1.2347651651378674e-07
+    },
+    "412303": {
+        "name": "Erik Paulsen",
+        "centrality": 1.479736050647349e-07
+    },
+    "412305": {
+        "name": "Gary Peters",
+        "centrality": 1.5159276707946535e-07
+    },
+    "412306": {
+        "name": "Pedro Pierluisi",
+        "centrality": 4.966269983828922e-08
+    },
+    "412307": {
+        "name": "Chellie Pingree",
+        "centrality": 6.016498576723216e-08
+    },
+    "412308": {
+        "name": "Jared Polis",
+        "centrality": -1.117451590815195e-09
+    },
+    "412309": {
+        "name": "Bill Posey",
+        "centrality": 1.0153993601013321e-07
+    },
+    "412310": {
+        "name": "David Roe",
+        "centrality": -1.9254786684902584e-09
+    },
+    "412312": {
+        "name": "Gregorio Sablan",
+        "centrality": 5.647868100155045e-09
+    },
+    "412314": {
+        "name": "Aaron Schock",
+        "centrality": 1.773496062746827e-07
+    },
+    "412315": {
+        "name": "Kurt Schrader",
+        "centrality": 1.436955555226745e-07
+    },
+    "412317": {
+        "name": "Glenn Thompson",
+        "centrality": 9.493618300438972e-08
+    },
+    "412318": {
+        "name": "Dina Titus",
+        "centrality": 1.2999474241074286e-07
+    },
+    "412319": {
+        "name": "Paul Tonko",
+        "centrality": 6.541159951471928e-08
+    },
+    "400032": {
+        "name": "Marsha Blackburn",
+        "centrality": 1.1901556239436427e-07
+    },
+    "412321": {
+        "name": "Mark Warner",
+        "centrality": 9.600764583708354e-08
+    },
+    "400034": {
+        "name": "Roy Blunt",
+        "centrality": 5.201852935182438e-08
+    },
+    "412323": {
+        "name": "Jeanne Shaheen",
+        "centrality": 6.643414791852365e-08
+    },
+    "412324": {
+        "name": "Kay Hagan",
+        "centrality": 1.0366341432397235e-07
+    },
+    "412325": {
+        "name": "Jeff Merkley",
+        "centrality": -1.4799377408173954e-08
+    },
+    "412326": {
+        "name": "Mark Begich",
+        "centrality": 9.88495490783834e-08
+    },
+    "412327": {
+        "name": "Marcia Fudge",
+        "centrality": 8.855658932019158e-08
+    },
+    "400040": {
+        "name": "John Boozman",
+        "centrality": 1.3359565659893972e-08
+    },
+    "412444": {
+        "name": "Vicky Hartzler",
+        "centrality": 7.616559065207747e-08
+    },
+    "412330": {
+        "name": "Michael Bennet",
+        "centrality": 6.257434251723447e-08
+    },
+    "412331": {
+        "name": "Mike Quigley",
+        "centrality": 7.119765122478121e-08
+    },
+    "400046": {
+        "name": "Kevin Brady",
+        "centrality": 1.1325237644530338e-07
+    },
+    "400047": {
+        "name": "Robert Brady",
+        "centrality": 5.4174123171637895e-08
+    },
+    "400048": {
+        "name": "Corrine Brown",
+        "centrality": 6.347991842420067e-08
+    },
+    "400050": {
+        "name": "Sherrod Brown",
+        "centrality": 3.0045533442073333e-07
+    },
+    "400052": {
+        "name": "Michael Burgess",
+        "centrality": 8.787099181192546e-08
+    },
+    "400054": {
+        "name": "Richard Burr",
+        "centrality": 1.5954290123409794e-08
+    },
+    "400057": {
+        "name": "Ken Calvert",
+        "centrality": -3.5416644929567155e-07
+    },
+    "400058": {
+        "name": "Dave Camp",
+        "centrality": 3.5404144234963355e-07
+    },
+    "400061": {
+        "name": "Shelley Capito",
+        "centrality": 1.5155469853006618e-07
+    },
+    "400062": {
+        "name": "Lois Capps",
+        "centrality": 1.5509454561027352e-07
+    },
+    "400063": {
+        "name": "Michael Capuano",
+        "centrality": 8.315125932671174e-08
+    },
+    "400068": {
+        "name": "John Carter",
+        "centrality": 8.004403396933598e-08
+    },
+    "400071": {
+        "name": "Steve Chabot",
+        "centrality": 1.1886546155219535e-07
+    },
+    "400073": {
+        "name": "Donna Christensen",
+        "centrality": 3.5024375033192766e-08
+    },
+    "400075": {
+        "name": "James Clyburn",
+        "centrality": 2.651510674310395e-07
+    },
+    "400076": {
+        "name": "Howard Coble",
+        "centrality": 7.955231509016541e-08
+    },
+    "400077": {
+        "name": "Tom Cole",
+        "centrality": 4.271959270744797e-08
+    },
+    "400080": {
+        "name": "John Conyers",
+        "centrality": 1.0091198954094073e-07
+    },
+    "400081": {
+        "name": "Jim Cooper",
+        "centrality": 7.230068204506279e-08
+    },
+    "400086": {
+        "name": "Ander Crenshaw",
+        "centrality": 4.2760847451631247e-08
+    },
+    "400087": {
+        "name": "Joseph Crowley",
+        "centrality": 2.0174159219305184e-07
+    },
+    "400089": {
+        "name": "John Culberson",
+        "centrality": 3.956949791426025e-08
+    },
+    "400090": {
+        "name": "Elijah Cummings",
+        "centrality": 8.891718799459538e-08
+    },
+    "412379": {
+        "name": "Judy Chu",
+        "centrality": 8.098636326703225e-08
+    },
+    "400093": {
+        "name": "Danny Davis",
+        "centrality": 5.956977755393466e-09
+    },
+    "412382": {
+        "name": "John Garamendi",
+        "centrality": 1.048739760835705e-07
+    },
+    "400097": {
+        "name": "Susan Davis",
+        "centrality": 5.5558653116895794e-08
+    },
+    "400100": {
+        "name": "Peter DeFazio",
+        "centrality": 9.321049421312312e-08
+    },
+    "400101": {
+        "name": "Diana DeGette",
+        "centrality": 1.0144238439448898e-07
+    },
+    "412390": {
+        "name": "Chris Coons",
+        "centrality": 6.064828707364994e-08
+    },
+    "412391": {
+        "name": "Joe Manchin",
+        "centrality": 2.8500580888176667e-07
+    },
+    "412392": {
+        "name": "Marlin Stutzman",
+        "centrality": 7.810674812953161e-08
+    },
+    "412393": {
+        "name": "Tom Reed",
+        "centrality": 1.5321669407553476e-07
+    },
+    "412394": {
+        "name": "Martha Roby",
+        "centrality": 8.214111576696411e-08
+    },
+    "412395": {
+        "name": "Mo Brooks",
+        "centrality": 6.420010014729879e-08
+    },
+    "400108": {
+        "name": "Mario Diaz-Balart",
+        "centrality": 8.16960543706619e-08
+    },
+    "412397": {
+        "name": "Paul Gosar",
+        "centrality": 9.219524744764999e-08
+    },
+    "400110": {
+        "name": "John Dingell",
+        "centrality": 1.3086837556562765e-07
+    },
+    "400111": {
+        "name": "Lloyd Doggett",
+        "centrality": 8.723447312738245e-08
+    },
+    "412400": {
+        "name": "Eric Crawford",
+        "centrality": 9.613750800342003e-08
+    },
+    "412401": {
+        "name": "Tim Griffin",
+        "centrality": 8.691029348133521e-08
+    },
+    "400114": {
+        "name": "Michael Doyle",
+        "centrality": 9.754817310496698e-08
+    },
+    "412403": {
+        "name": "Jeff Denham",
+        "centrality": 1.560197318704453e-07
+    },
+    "412404": {
+        "name": "Karen Bass",
+        "centrality": 8.735679960172624e-08
+    },
+    "412405": {
+        "name": "Scott Tipton",
+        "centrality": 1.079061677379805e-07
+    },
+    "412406": {
+        "name": "Cory Gardner",
+        "centrality": 1.5496726778644887e-07
+    },
+    "412407": {
+        "name": "John Carney",
+        "centrality": 1.221511412630596e-07
+    },
+    "412408": {
+        "name": "Steve Southerland",
+        "centrality": 2.5147690300027557e-07
+    },
+    "412409": {
+        "name": "Richard Nugent",
+        "centrality": 8.471727336651497e-08
+    },
+    "400122": {
+        "name": "Eliot Engel",
+        "centrality": 7.79858134385675e-08
+    },
+    "412411": {
+        "name": "Dennis Ross",
+        "centrality": 7.898028653447881e-08
+    },
+    "400124": {
+        "name": "Anna Eshoo",
+        "centrality": 8.635946908676632e-08
+    },
+    "412416": {
+        "name": "Rob Woodall",
+        "centrality": 5.4262164964109265e-08
+    },
+    "412417": {
+        "name": "Austin Scott",
+        "centrality": 8.914664695976066e-08
+    },
+    "412418": {
+        "name": "Colleen Hanabusa",
+        "centrality": 8.672408150282865e-08
+    },
+    "412421": {
+        "name": "Adam Kinzinger",
+        "centrality": 1.5020147827746253e-07
+    },
+    "412422": {
+        "name": "Randy Hultgren",
+        "centrality": 1.0254507527969084e-07
+    },
+    "412426": {
+        "name": "Todd Rokita",
+        "centrality": 8.945612023408026e-08
+    },
+    "412427": {
+        "name": "Larry Bucshon",
+        "centrality": 9.429412644303566e-08
+    },
+    "412428": {
+        "name": "Todd Young",
+        "centrality": 7.551399919037254e-08
+    },
+    "412429": {
+        "name": "Tim Huelskamp",
+        "centrality": 6.062517566775853e-08
+    },
+    "412430": {
+        "name": "Kevin Yoder",
+        "centrality": 9.639157882562776e-08
+    },
+    "412431": {
+        "name": "Mike Pompeo",
+        "centrality": 1.2772319868568346e-07
+    },
+    "412432": {
+        "name": "Cedric Richmond",
+        "centrality": 1.1056777582160812e-07
+    },
+    "400145": {
+        "name": "Scott Garrett",
+        "centrality": 1.0986272678226383e-07
+    },
+    "412434": {
+        "name": "Andy Harris",
+        "centrality": 7.596923077553526e-08
+    },
+    "400147": {
+        "name": "Jim Gerlach",
+        "centrality": 1.4897201389834937e-07
+    },
+    "412436": {
+        "name": "Dan Benishek",
+        "centrality": 1.3783796141009673e-07
+    },
+    "412437": {
+        "name": "Bill Huizenga",
+        "centrality": 5.856950186373485e-08
+    },
+    "412438": {
+        "name": "Justin Amash",
+        "centrality": 3.8385233755337615e-08
+    },
+    "400151": {
+        "name": "Phil Gingrey",
+        "centrality": 1.0769828489814166e-07
+    },
+    "412442": {
+        "name": "Alan Nunnelee",
+        "centrality": 1.0030479165020027e-07
+    },
+    "412443": {
+        "name": "Steven Palazzo",
+        "centrality": 6.252875220760819e-08
+    },
+    "410396": {
+        "name": "Steve Stockman",
+        "centrality": 3.883614231364635e-08
+    },
+    "400157": {
+        "name": "Kay Granger",
+        "centrality": 1.0362881060466856e-07
+    },
+    "400158": {
+        "name": "Sam Graves",
+        "centrality": 1.1061726841876841e-07
+    },
+    "400160": {
+        "name": "Gene Green",
+        "centrality": 1.0205889009780164e-07
+    },
+    "412449": {
+        "name": "Jon Runyan",
+        "centrality": 1.6695210951359366e-07
+    },
+    "412451": {
+        "name": "Michael Grimm",
+        "centrality": 1.360669358673371e-07
+    },
+    "400165": {
+        "name": "Ralph Hall",
+        "centrality": 6.710863345057722e-08
+    },
+    "412454": {
+        "name": "Richard Hanna",
+        "centrality": 9.781836994581316e-08
+    },
+    "412457": {
+        "name": "Renee Ellmers",
+        "centrality": 1.070660432656263e-07
+    },
+    "400170": {
+        "name": "Alcee Hastings",
+        "centrality": 5.67906006939028e-08
+    },
+    "400171": {
+        "name": "Doc Hastings",
+        "centrality": 7.236468875558598e-08
+    },
+    "412460": {
+        "name": "Bill Johnson",
+        "centrality": 1.3028152083896137e-07
+    },
+    "412461": {
+        "name": "Steve Stivers",
+        "centrality": 1.4163830046325951e-07
+    },
+    "412463": {
+        "name": "Bob Gibbs",
+        "centrality": 1.0648419840185623e-07
+    },
+    "412464": {
+        "name": "James Lankford",
+        "centrality": 8.161394333079044e-08
+    },
+    "412465": {
+        "name": "Mike Kelly",
+        "centrality": 7.126268888595599e-08
+    },
+    "412466": {
+        "name": "Patrick Meehan",
+        "centrality": 1.764522473230452e-07
+    },
+    "412468": {
+        "name": "Tom Marino",
+        "centrality": 8.904544522153907e-08
+    },
+    "412469": {
+        "name": "Lou Barletta",
+        "centrality": 1.0792666833100552e-07
+    },
+    "412470": {
+        "name": "David Cicilline",
+        "centrality": 1.1242677907071755e-07
+    },
+    "412471": {
+        "name": "Tim Scott",
+        "centrality": 1.0462295353166781e-07
+    },
+    "412472": {
+        "name": "Jeff Duncan",
+        "centrality": 7.347123038078928e-08
+    },
+    "412473": {
+        "name": "Trey Gowdy",
+        "centrality": 6.671771507478003e-08
+    },
+    "412474": {
+        "name": "Mick Mulvaney",
+        "centrality": 4.987698711075707e-08
+    },
+    "412475": {
+        "name": "Kristi Noem",
+        "centrality": 1.337788217003178e-07
+    },
+    "412476": {
+        "name": "Charles Fleischmann",
+        "centrality": 8.910865782142519e-08
+    },
+    "400189": {
+        "name": "Steny Hoyer",
+        "centrality": 3.899369497857927e-07
+    },
+    "412478": {
+        "name": "Diane Black",
+        "centrality": 1.201942273767074e-07
+    },
+    "412480": {
+        "name": "Bill Flores",
+        "centrality": 8.11938281539042e-08
+    },
+    "412482": {
+        "name": "Blake Farenthold",
+        "centrality": 8.607516354693513e-08
+    },
+    "400195": {
+        "name": "Steve Israel",
+        "centrality": 1.8692791243435158e-07
+    },
+    "400196": {
+        "name": "Darrell Issa",
+        "centrality": 1.4990239113436966e-07
+    },
+    "412486": {
+        "name": "Jaime Herrera Beutler",
+        "centrality": 8.619091562111005e-08
+    },
+    "412487": {
+        "name": "David McKinley",
+        "centrality": 1.2703611744438496e-07
+    },
+    "412488": {
+        "name": "Sean Duffy",
+        "centrality": 1.5149310898086808e-07
+    },
+    "412489": {
+        "name": "Reid Ribble",
+        "centrality": 1.428796695360457e-07
+    },
+    "412490": {
+        "name": "Richard Blumenthal",
+        "centrality": 5.066492736884432e-08
+    },
+    "412491": {
+        "name": "Marco Rubio",
+        "centrality": 1.0566261710946555e-07
+    },
+    "412492": {
+        "name": "Rand Paul",
+        "centrality": 1.4595945767432298e-08
+    },
+    "412493": {
+        "name": "Kelly Ayotte",
+        "centrality": 7.006270830230247e-08
+    },
+    "412494": {
+        "name": "John Hoeven",
+        "centrality": 2.6589992212084155e-08
+    },
+    "412495": {
+        "name": "Mike Lee",
+        "centrality": 2.747820495962997e-08
+    },
+    "412496": {
+        "name": "Ron Johnson",
+        "centrality": 1.4013238527373922e-08
+    },
+    "400184": {
+        "name": "Rush Holt",
+        "centrality": 9.792426250949959e-08
+    },
+    "412498": {
+        "name": "Janice Hahn",
+        "centrality": 1.2737646629754387e-07
+    },
+    "400211": {
+        "name": "Marcy Kaptur",
+        "centrality": 8.489320648838963e-08
+    },
+    "412500": {
+        "name": "Mark Amodei",
+        "centrality": 1.198533686209289e-07
+    },
+    "412501": {
+        "name": "Suzanne Bonamici",
+        "centrality": 1.3559339376269574e-07
+    },
+    "412502": {
+        "name": "Ron Barber",
+        "centrality": 1.5516147799156478e-07
+    },
+    "412503": {
+        "name": "Thomas Massie",
+        "centrality": 9.851590001128343e-08
+    },
+    "412505": {
+        "name": "Suzan DelBene",
+        "centrality": 1.197076312077341e-07
+    },
+    "412506": {
+        "name": "Donald Payne",
+        "centrality": 1.8249442618391187e-09
+    },
+    "412507": {
+        "name": "Brian Schatz",
+        "centrality": -2.3836714504232725e-07
+    },
+    "400220": {
+        "name": "Steve King",
+        "centrality": -7.328394008362818e-10
+    },
+    "412509": {
+        "name": "Kyrsten Sinema",
+        "centrality": 1.2002154453573844e-07
+    },
+    "412510": {
+        "name": "Doug LaMalfa",
+        "centrality": 1.0163379710107998e-07
+    },
+    "412511": {
+        "name": "Jared Huffman",
+        "centrality": 1.0372213671581773e-07
+    },
+    "412512": {
+        "name": "Ami Bera",
+        "centrality": 1.2552660228664333e-07
+    },
+    "412513": {
+        "name": "Paul Cook",
+        "centrality": 9.915644497607397e-08
+    },
+    "412514": {
+        "name": "Eric Swalwell",
+        "centrality": 4.2513621305844295e-08
+    },
+    "412515": {
+        "name": "David Valadao",
+        "centrality": 1.264083924902649e-07
+    },
+    "412516": {
+        "name": "Julia Brownley",
+        "centrality": 1.0107698483367237e-07
+    },
+    "400230": {
+        "name": "James Langevin",
+        "centrality": 5.986789643932094e-08
+    },
+    "412519": {
+        "name": "Raul Ruiz",
+        "centrality": 1.1403106367052059e-07
+    },
+    "412520": {
+        "name": "Mark Takano",
+        "centrality": 7.829358146478227e-08
+    },
+    "412521": {
+        "name": "Alan Lowenthal",
+        "centrality": 9.089294222547056e-08
+    },
+    "412522": {
+        "name": "Juan Vargas",
+        "centrality": 1.2242639151750116e-07
+    },
+    "412523": {
+        "name": "Scott Peters",
+        "centrality": 8.830154884710069e-08
+    },
+    "412524": {
+        "name": "Elizabeth Esty",
+        "centrality": 3.5118778766408185e-07
+    },
+    "412525": {
+        "name": "Ted Yoho",
+        "centrality": 5.996117100293753e-08
+    },
+    "412526": {
+        "name": "Ron DeSantis",
+        "centrality": 8.924382241773471e-08
+    },
+    "412527": {
+        "name": "Patrick Murphy",
+        "centrality": 1.183323611497749e-07
+    },
+    "400240": {
+        "name": "John Lewis",
+        "centrality": 1.2778340063103155e-07
+    },
+    "412529": {
+        "name": "Lois Frankel",
+        "centrality": 1.4634999431974376e-07
+    },
+    "412530": {
+        "name": "Joe Garcia",
+        "centrality": 8.494277710343708e-08
+    },
+    "412531": {
+        "name": "Doug Collins",
+        "centrality": 6.432603773527635e-08
+    },
+    "412532": {
+        "name": "Tulsi Gabbard",
+        "centrality": 1.0529642761754155e-07
+    },
+    "412533": {
+        "name": "Tammy Duckworth",
+        "centrality": 1.4053453404575623e-07
+    },
+    "400246": {
+        "name": "Nita Lowey",
+        "centrality": 7.20293873810903e-08
+    },
+    "412535": {
+        "name": "William Enyart",
+        "centrality": 1.082511962711918e-07
+    },
+    "412536": {
+        "name": "Rodney Davis",
+        "centrality": 1.6503849095712664e-07
+    },
+    "412537": {
+        "name": "Cheri Bustos",
+        "centrality": 1.2617523882087249e-07
+    },
+    "412538": {
+        "name": "Jackie Walorski",
+        "centrality": 1.4044041800349966e-07
+    },
+    "412539": {
+        "name": "Susan Brooks",
+        "centrality": 8.744288537431265e-08
+    },
+    "412540": {
+        "name": "Luke Messer",
+        "centrality": 7.901501008089823e-08
+    },
+    "412541": {
+        "name": "Garland Barr",
+        "centrality": 9.965490682977672e-08
+    },
+    "412542": {
+        "name": "Elizabeth Warren",
+        "centrality": 1.7403558614835853e-07
+    },
+    "412543": {
+        "name": "Joseph Kennedy",
+        "centrality": 7.662471059300866e-10
+    },
+    "412544": {
+        "name": "John Delaney",
+        "centrality": 1.0991815152520059e-07
+    },
+    "400257": {
+        "name": "Carolyn McCarthy",
+        "centrality": 1.1806554694160726e-07
+    },
+    "400259": {
+        "name": "Betty McCollum",
+        "centrality": 6.409382585323596e-08
+    },
+    "412548": {
+        "name": "Ann Wagner",
+        "centrality": 1.6658012440719574e-07
+    },
+    "412477": {
+        "name": "Scott DesJarlais",
+        "centrality": 9.125431689921618e-08
+    },
+    "412550": {
+        "name": "Richard Hudson",
+        "centrality": 1.451147008899193e-07
+    },
+    "412551": {
+        "name": "Robert Pittenger",
+        "centrality": 1.0101926274259438e-07
+    },
+    "412552": {
+        "name": "Mark Meadows",
+        "centrality": 6.79646150584945e-08
+    },
+    "412553": {
+        "name": "George Holding",
+        "centrality": 9.23807617233372e-07
+    },
+    "412554": {
+        "name": "Heidi Heitkamp",
+        "centrality": 2.611110044878451e-07
+    },
+    "412555": {
+        "name": "Kevin Cramer",
+        "centrality": 9.679507479937466e-08
+    },
+    "412556": {
+        "name": "Deb Fischer",
+        "centrality": 2.4182348790610685e-07
+    },
+    "400194": {
+        "name": "John Isakson",
+        "centrality": 3.127209221216081e-08
+    },
+    "412558": {
+        "name": "Michelle Lujan Grisham",
+        "centrality": 1.461406987988769e-07
+    },
+    "412559": {
+        "name": "Steven Horsford",
+        "centrality": 2.773161541615005e-07
+    },
+    "412560": {
+        "name": "Grace Meng",
+        "centrality": 1.0261701752387834e-07
+    },
+    "412561": {
+        "name": "Hakeem Jeffries",
+        "centrality": 8.13799467895815e-08
+    },
+    "412562": {
+        "name": "Sean Maloney",
+        "centrality": 1.1484527227257568e-07
+    },
+    "412483": {
+        "name": "Edward Rigell",
+        "centrality": 1.1715584723203461e-07
+    },
+    "412564": {
+        "name": "Brad Wenstrup",
+        "centrality": 8.862573963856037e-08
+    },
+    "412565": {
+        "name": "Joyce Beatty",
+        "centrality": 1.3952893084840537e-07
+    },
+    "412566": {
+        "name": "David Joyce",
+        "centrality": 1.0305457248489554e-07
+    },
+    "400279": {
+        "name": "Jeff Miller",
+        "centrality": 7.769840808089868e-08
+    },
+    "412568": {
+        "name": "Markwayne Mullin",
+        "centrality": 9.246218425535458e-08
+    },
+    "412569": {
+        "name": "Scott Perry",
+        "centrality": 6.371208293823815e-08
+    },
+    "412570": {
+        "name": "Keith Rothfus",
+        "centrality": 1.6984393445043316e-07
+    },
+    "400283": {
+        "name": "James Moran",
+        "centrality": 4.349545133843953e-08
+    },
+    "412572": {
+        "name": "Tom Rice",
+        "centrality": 1.0635451456211895e-07
+    },
+    "412573": {
+        "name": "Ted Cruz",
+        "centrality": 2.3080053985503757e-07
+    },
+    "412574": {
+        "name": "Randy Weber",
+        "centrality": 1.0156749304241557e-07
+    },
+    "412575": {
+        "name": "Beto O'Rourke",
+        "centrality": 5.4619461810074794e-08
+    },
+    "412576": {
+        "name": "Joaquin Castro",
+        "centrality": 1.9524195684406213e-07
+    },
+    "412577": {
+        "name": "Pete Gallego",
+        "centrality": 1.1096655310635904e-07
+    },
+    "412578": {
+        "name": "Roger Williams",
+        "centrality": 4.1439592478773895e-06
+    },
+    "412579": {
+        "name": "Marc Veasey",
+        "centrality": 1.349496626031211e-07
+    },
+    "412580": {
+        "name": "Filemon Vela",
+        "centrality": 5.6333119128601744e-08
+    },
+    "412581": {
+        "name": "Chris Stewart",
+        "centrality": 8.015849038931359e-08
+    },
+    "412583": {
+        "name": "Derek Kilmer",
+        "centrality": 1.7693630094480336e-07
+    },
+    "412584": {
+        "name": "Denny Heck",
+        "centrality": 2.263911903884347e-11
+    },
+    "412585": {
+        "name": "Mark Pocan",
+        "centrality": 1.4516068964804066e-07
+    },
+    "400199": {
+        "name": "Sheila Jackson Lee",
+        "centrality": 4.815124398560478e-08
+    },
+    "412595": {
+        "name": "Robin Kelly",
+        "centrality": 3.8815988621583834e-10
+    },
+    "400308": {
+        "name": "Frank Pallone",
+        "centrality": 1.1300600336938533e-07
+    },
+    "400309": {
+        "name": "Bill Pascrell",
+        "centrality": 1.4307234864012635e-07
+    },
+    "400310": {
+        "name": "Ed Pastor",
+        "centrality": 9.529948304813608e-08
+    },
+    "412600": {
+        "name": "Katherine Clark",
+        "centrality": -6.889954658867715e-10
+    },
+    "400313": {
+        "name": "Stevan Pearce",
+        "centrality": 1.0120038823349413e-07
+    },
+    "400314": {
+        "name": "Nancy Pelosi",
+        "centrality": 2.0856089329604658e-07
+    },
+    "412604": {
+        "name": "Curtis Clawson",
+        "centrality": 0.0
+    },
+    "400318": {
+        "name": "Thomas Petri",
+        "centrality": 7.567513817039652e-08
+    },
+    "400325": {
+        "name": "Robert Portman",
+        "centrality": 7.007431624936903e-08
+    },
+    "400326": {
+        "name": "David Price",
+        "centrality": 1.0369089473154412e-07
+    },
+    "400204": {
+        "name": "Eddie Johnson",
+        "centrality": 9.643570490669344e-08
+    },
+    "400331": {
+        "name": "Nick Rahall",
+        "centrality": 1.4882617896279564e-07
+    },
+    "400333": {
+        "name": "Charles Rangel",
+        "centrality": 8.355007283405312e-08
+    },
+    "400340": {
+        "name": "Harold Rogers",
+        "centrality": 1.33083644710051e-07
+    },
+    "400341": {
+        "name": "Mike Rogers",
+        "centrality": 1.586242587242108e-07
+    },
+    "400342": {
+        "name": "Mike Rogers",
+        "centrality": 1.586242587242108e-07
+    },
+    "400343": {
+        "name": "Dana Rohrabacher",
+        "centrality": 2.2472867100858095e-08
+    },
+    "400344": {
+        "name": "Ileana Ros-Lehtinen",
+        "centrality": 1.1911270162974786e-07
+    },
+    "400347": {
+        "name": "Lucille Roybal-Allard",
+        "centrality": 6.409590168630474e-08
+    },
+    "400348": {
+        "name": "Edward Royce",
+        "centrality": 1.0183188033702224e-07
+    },
+    "400350": {
+        "name": "Bobby Rush",
+        "centrality": 6.769742051312702e-08
+    },
+    "400351": {
+        "name": "Paul Ryan",
+        "centrality": 2.1054480596883506e-07
+    },
+    "400352": {
+        "name": "Tim Ryan",
+        "centrality": 8.165306651484268e-08
+    },
+    "300002": {
+        "name": "Lamar Alexander",
+        "centrality": 3.1613474802324456e-08
+    },
+    "400356": {
+        "name": "Loretta Sanchez",
+        "centrality": 1.2369779195986066e-07
+    },
+    "400357": {
+        "name": "Bernard Sanders",
+        "centrality": 6.004106828526113e-08
+    },
+    "400209": {
+        "name": "Walter Jones",
+        "centrality": 3.8455629573547695e-08
+    },
+    "400360": {
+        "name": "Janice Schakowsky",
+        "centrality": 6.797704219337613e-08
+    },
+    "400361": {
+        "name": "Adam Schiff",
+        "centrality": 9.567772351727151e-08
+    },
+    "400363": {
+        "name": "David Scott",
+        "centrality": 1.1641770832689606e-07
+    },
+    "400364": {
+        "name": "Robert Scott",
+        "centrality": 4.6854615957892e-08
+    },
+    "400365": {
+        "name": "F. Sensenbrenner",
+        "centrality": 5.8577075171494555e-08
+    },
+    "400367": {
+        "name": "Pete Sessions",
+        "centrality": 1.8882975307621217e-07
+    },
+    "300018": {
+        "name": "Maria Cantwell",
+        "centrality": 6.325258823281332e-08
+    },
+    "400371": {
+        "name": "Brad Sherman",
+        "centrality": 1.1674032117872461e-07
+    },
+    "400373": {
+        "name": "John Shimkus",
+        "centrality": 1.7708392889858496e-07
+    },
+    "300023": {
+        "name": "Thad Cochran",
+        "centrality": 8.968376249701619e-09
+    },
+    "400376": {
+        "name": "Michael Simpson",
+        "centrality": 9.070200598526178e-08
+    },
+    "300025": {
+        "name": "Susan Collins",
+        "centrality": 5.3328374445526174e-08
+    },
+    "400378": {
+        "name": "Louise Slaughter",
+        "centrality": 1.1121874592656897e-07
+    },
+    "400379": {
+        "name": "Adam Smith",
+        "centrality": 8.287699441032135e-08
+    },
+    "400380": {
+        "name": "Christopher Smith",
+        "centrality": 2.736976148966907e-10
+    },
+    "400381": {
+        "name": "Lamar Smith",
+        "centrality": 1.348283670794289e-07
+    },
+    "400206": {
+        "name": "Sam Johnson",
+        "centrality": 9.342808610038237e-08
+    },
+    "300043": {
+        "name": "Dianne Feinstein",
+        "centrality": 2.0931396095175468e-07
+    },
+    "300047": {
+        "name": "Lindsey Graham",
+        "centrality": 6.437445201378212e-08
+    },
+    "400400": {
+        "name": "Lee Terry",
+        "centrality": 1.4778191093647953e-07
+    },
+    "400402": {
+        "name": "Bennie Thompson",
+        "centrality": 1.204087682073085e-07
+    },
+    "400403": {
+        "name": "Mike Thompson",
+        "centrality": 1.4855562268239793e-07
+    },
+    "400404": {
+        "name": "Mac Thornberry",
+        "centrality": 5.803451927978692e-08
+    },
+    "400406": {
+        "name": "Patrick Tiberi",
+        "centrality": 2.219044861867233e-07
+    },
+    "400407": {
+        "name": "John Tierney",
+        "centrality": 1.0242948899352612e-07
+    },
+    "400408": {
+        "name": "Patrick Toomey",
+        "centrality": 7.320300209841707e-08
+    },
+    "300058": {
+        "name": "Tim Johnson",
+        "centrality": 6.099251592351797e-08
+    },
+    "400411": {
+        "name": "Michael Turner",
+        "centrality": 7.04382334703298e-08
+    },
+    "400412": {
+        "name": "Mark Udall",
+        "centrality": 9.260329632238266e-08
+    },
+    "400413": {
+        "name": "Tom Udall",
+        "centrality": 3.690893331987324e-08
+    },
+    "400414": {
+        "name": "Fred Upton",
+        "centrality": 3.7420962344833594e-07
+    },
+    "400415": {
+        "name": "Chris Van Hollen",
+        "centrality": 1.5835620598208467e-07
+    },
+    "300065": {
+        "name": "Patrick Leahy",
+        "centrality": 1.2340339982176232e-08
+    },
+    "400418": {
+        "name": "David Vitter",
+        "centrality": 5.6012903069857e-08
+    },
+    "400419": {
+        "name": "Greg Walden",
+        "centrality": 2.1281738761042887e-07
+    },
+    "400422": {
+        "name": "Maxine Waters",
+        "centrality": 6.584355390598042e-08
+    },
+    "300071": {
+        "name": "John McCain",
+        "centrality": -7.026088906060367e-09
+    },
+    "300072": {
+        "name": "Mitch McConnell",
+        "centrality": 1.6455893032976236e-07
+    },
+    "400425": {
+        "name": "Henry Waxman",
+        "centrality": 1.6284050556105996e-07
+    },
+    "300075": {
+        "name": "Lisa Murkowski",
+        "centrality": 3.890338815966277e-08
+    },
+    "300076": {
+        "name": "Patty Murray",
+        "centrality": 5.405862883512589e-08
+    },
+    "300078": {
+        "name": "Bill Nelson",
+        "centrality": 2.202485621046868e-07
+    },
+    "400431": {
+        "name": "Ed Whitfield",
+        "centrality": 1.647105553070838e-07
+    },
+    "300080": {
+        "name": "Mark Pryor",
+        "centrality": 8.495854507570057e-08
+    },
+    "400433": {
+        "name": "Joe Wilson",
+        "centrality": 5.913180046042092e-08
+    },
+    "300082": {
+        "name": "Harry Reid",
+        "centrality": 1.0429446339735559e-07
+    },
+    "400435": {
+        "name": "Frank Wolf",
+        "centrality": 6.002237742858267e-08
+    },
+    "300084": {
+        "name": "John Rockefeller",
+        "centrality": 5.734305092551283e-08
+    },
+    "400222": {
+        "name": "Mark Kirk",
+        "centrality": 1.9880803604564685e-08
+    },
+    "300087": {
+        "name": "Charles Schumer",
+        "centrality": 4.352024291525776e-08
+    },
+    "400440": {
+        "name": "Don Young",
+        "centrality": 1.8380976401550427e-07
+    },
+    "400441": {
+        "name": "Randy Neugebauer",
+        "centrality": 9.231224502166618e-08
+    },
+    "300093": {
+        "name": "Debbie Stabenow",
+        "centrality": 5.085826781383618e-07
+    },
+    "400224": {
+        "name": "John Kline",
+        "centrality": 1.3228794306536898e-07
+    },
+    "300100": {
+        "name": "Ron Wyden",
+        "centrality": 3.6742762186128135e-08
+    },
+    "412484": {
+        "name": "Robert Hurt",
+        "centrality": 1.217101567193139e-07
+    },
+    "400141": {
+        "name": "Trent Franks",
+        "centrality": 3.9253962928744465e-08
+    },
+    "400232": {
+        "name": "Rick Larsen",
+        "centrality": 1.3980669263795191e-07
+    },
+    "400233": {
+        "name": "John Larson",
+        "centrality": 1.819515052799465e-07
+    },
+    "400234": {
+        "name": "Tom Latham",
+        "centrality": 2.5030967181792947e-07
+    },
+    "400237": {
+        "name": "Barbara Lee",
+        "centrality": 1.017413071427482e-07
+    },
+    "400238": {
+        "name": "Sander Levin",
+        "centrality": 1.6742906490079779e-07
+    },
+    "400546": {
+        "name": "John Thune",
+        "centrality": 1.005912635795764e-07
+    },
+    "400244": {
+        "name": "Frank LoBiondo",
+        "centrality": 1.0004506871070387e-07
+    },
+    "400245": {
+        "name": "Zoe Lofgren",
+        "centrality": 6.057738971187961e-08
+    },
+    "400247": {
+        "name": "Frank Lucas",
+        "centrality": 1.0609316439240488e-07
+    },
+    "400249": {
+        "name": "Stephen Lynch",
+        "centrality": 6.02492018968801e-08
+    },
+    "400606": {
+        "name": "Matt Salmon",
+        "centrality": 1.4042861640489178e-07
+    },
+    "400607": {
+        "name": "Marshall Sanford",
+        "centrality": 0.0
+    },
+    "400251": {
+        "name": "Carolyn Maloney",
+        "centrality": 1.1212637537577905e-07
+    },
+    "400616": {
+        "name": "George Butterfield",
+        "centrality": 0.0
+    },
+    "400618": {
+        "name": "Jim Costa",
+        "centrality": 9.491931860217648e-08
+    },
+    "400253": {
+        "name": "Edward Markey",
+        "centrality": 5.9263126855318e-08
+    },
+    "400626": {
+        "name": "Tom Price",
+        "centrality": 1.4734921119576083e-07
+    },
+    "400627": {
+        "name": "Lynn Westmoreland",
+        "centrality": 7.014057711956019e-08
+    },
+    "400628": {
+        "name": "John Barrow",
+        "centrality": 1.9789661576302726e-07
+    },
+    "400629": {
+        "name": "Barack Obama",
+        "centrality": 3.083476705561656e-05
+    },
+    "400630": {
+        "name": "Daniel Lipinski",
+        "centrality": 7.181295879625552e-08
+    },
+    "400255": {
+        "name": "Jim Matheson",
+        "centrality": 2.2437033485290446e-07
+    },
+    "400636": {
+        "name": "Charles Boustany",
+        "centrality": 2.0919965778119823e-07
+    },
+    "400639": {
+        "name": "Emanuel Cleaver",
+        "centrality": 9.493079280429364e-08
+    },
+    "400640": {
+        "name": "Jeff Fortenberry",
+        "centrality": 4.689283357718268e-08
+    },
+    "400641": {
+        "name": "Brian Higgins",
+        "centrality": 8.116770609347477e-08
+    },
+    "400643": {
+        "name": "Virginia Foxx",
+        "centrality": 7.450803655347017e-08
+    },
+    "400644": {
+        "name": "Patrick McHenry",
+        "centrality": 9.609057745794664e-08
+    },
+    "400646": {
+        "name": "Michael Fitzpatrick",
+        "centrality": 1.5501751687847921e-07
+    },
+    "412545": {
+        "name": "Angus King",
+        "centrality": 1.8078784480911404e-07
+    },
+    "400652": {
+        "name": "Ted Poe",
+        "centrality": 5.865217992646471e-08
+    },
+    "400653": {
+        "name": "Al Green",
+        "centrality": 2.6966298952159534e-08
+    },
+    "400654": {
+        "name": "Michael McCaul",
+        "centrality": 1.9840165118099294e-06
+    },
+    "400656": {
+        "name": "Kenny Marchant",
+        "centrality": 9.008595445750645e-08
+    },
+    "400657": {
+        "name": "Henry Cuellar",
+        "centrality": 1.121465917607866e-07
+    },
+    "412547": {
+        "name": "Kerry Bentivolio",
+        "centrality": 4.3189504193983766e-08
+    },
+    "400661": {
+        "name": "Gwen Moore",
+        "centrality": 8.752822997697115e-08
+    },
+    "400663": {
+        "name": "Doris Matsui",
+        "centrality": 1.0454777633151673e-07
+    },
+    "400262": {
+        "name": "Jim McDermott",
+        "centrality": 5.3822453365783005e-08
+    },
+    "400263": {
+        "name": "James McGovern",
+        "centrality": 9.107798393566988e-08
+    },
+    "400266": {
+        "name": "Mike McIntyre",
+        "centrality": 1.529700725683732e-07
+    },
+    "400267": {
+        "name": "Howard McKeon",
+        "centrality": 1.192400853349908e-07
+    },
+    "412557": {
+        "name": "Ann Kuster",
+        "centrality": 7.910471811253086e-08
+    },
+    "400271": {
+        "name": "Gregory Meeks",
+        "centrality": 6.207538190632459e-08
+    },
+    "400272": {
+        "name": "Robert Men\u00e9ndez",
+        "centrality": 0.0
+    },
+    "400273": {
+        "name": "John Mica",
+        "centrality": 1.4618686309724435e-07
+    },
+    "400218": {
+        "name": "Ron Kind",
+        "centrality": 1.651592138852542e-07
+    },
+    "412563": {
+        "name": "Chris Collins",
+        "centrality": 1.1174613151875575e-07
+    },
+    "400276": {
+        "name": "Candice Miller",
+        "centrality": 7.196389275800507e-08
+    },
+    "400277": {
+        "name": "Gary Miller",
+        "centrality": 1.1179314983435217e-07
+    },
+    "400278": {
+        "name": "George Miller",
+        "centrality": 1.020437030801621e-07
+    },
+    "400219": {
+        "name": "Peter King",
+        "centrality": 1.0903868096054516e-07
+    },
+    "400623": {
+        "name": "Debbie Wasserman Schultz",
+        "centrality": 2.4972727525624315e-07
+    },
+    "400284": {
+        "name": "Jerry Moran",
+        "centrality": 4.869723266434698e-08
+    },
+    "400285": {
+        "name": "Tim Murphy",
+        "centrality": 1.490094109366484e-07
+    },
+    "400221": {
+        "name": "Jack Kingston",
+        "centrality": 8.560262452941427e-08
+    },
+    "400289": {
+        "name": "Jerrold Nadler",
+        "centrality": 5.9312248867514345e-08
+    },
+    "400290": {
+        "name": "Grace Napolitano",
+        "centrality": 5.61512928698942e-08
+    },
+    "400291": {
+        "name": "Richard Neal",
+        "centrality": 1.7385990379826398e-07
+    },
+    "400154": {
+        "name": "Bob Goodlatte",
+        "centrality": 1.1131082793105342e-07
+    },
+    "400295": {
+        "name": "Eleanor Norton",
+        "centrality": 2.0583208394805233e-08
+    },
+    "400297": {
+        "name": "Devin Nunes",
+        "centrality": 1.2791543197326607e-07
+    },
+    "400647": {
+        "name": "Allyson Schwartz",
+        "centrality": 1.453536738577871e-07
+    },
+    "412596": {
+        "name": "Jason Smith",
+        "centrality": 3.422338210395014e-10
+    },
+    "412602": {
+        "name": "John Walsh",
+        "centrality": 4.9417086990954394e-09
+    },
+    "400316": {
+        "name": "Collin Peterson",
+        "centrality": 9.339571007039198e-08
+    },
+    "400659": {
+        "name": "Cathy McMorris Rodgers",
+        "centrality": 1.5907016159915297e-07
+    },
+    "300048": {
+        "name": "Charles Grassley",
+        "centrality": 3.186605771197013e-08
+    },
+    "400004": {
+        "name": "Robert Aderholt",
+        "centrality": 6.232219985138057e-08
+    },
+    "400018": {
+        "name": "Joe Barton",
+        "centrality": 1.1309598307044642e-07
+    },
+    "300008": {
+        "name": "Joseph Biden",
+        "centrality": 8.225119343302547e-10
+    },
+    "400021": {
+        "name": "Xavier Becerra",
+        "centrality": 1.658960649658477e-07
+    },
+    "300011": {
+        "name": "Barbara Boxer",
+        "centrality": 2.1459962265176e-09
+    },
+    "400029": {
+        "name": "Rob Bishop",
+        "centrality": 4.915331408720902e-08
+    },
+    "400030": {
+        "name": "Sanford Bishop",
+        "centrality": 1.1826488682280324e-07
+    },
+    "400031": {
+        "name": "Timothy Bishop",
+        "centrality": 1.497867170780819e-07
+    },
+    "300021": {
+        "name": "Saxby Chambliss",
+        "centrality": 1.0978773069506506e-07
+    },
+    "412445": {
+        "name": "Billy Long",
+        "centrality": 7.721207661547108e-08
+    },
+    "400033": {
+        "name": "Earl Blumenauer",
+        "centrality": 1.1225626819199977e-07
+    },
+    "412322": {
+        "name": "James Risch",
+        "centrality": 3.1297119235817043e-08
+    },
+    "400036": {
+        "name": "John Boehner",
+        "centrality": 5.153824218288601e-07
+    },
+    "300027": {
+        "name": "John Cornyn",
+        "centrality": 9.536651991766906e-08
+    },
+    "400103": {
+        "name": "Rosa DeLauro",
+        "centrality": 8.209461431987005e-08
+    },
+    "400041": {
+        "name": "Madeleine Bordallo",
+        "centrality": 2.5926387388934793e-08
+    }
+}

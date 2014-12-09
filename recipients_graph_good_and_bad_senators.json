@@ -1,0 +1,1066 @@
+{
+    "nodes": [
+        {
+            "group": "Republican",
+            "id": "400194",
+            "name": "John Isakson"
+        },
+        {
+            "group": "Republican",
+            "id": "400408",
+            "name": "Patrick Toomey"
+        },
+        {
+            "group": "Republican",
+            "id": "400325",
+            "name": "Robert Portman"
+        },
+        {
+            "group": "Republican",
+            "id": "300002",
+            "name": "Lamar Alexander"
+        },
+        {
+            "group": "Republican",
+            "id": "400054",
+            "name": "Richard Burr"
+        },
+        {
+            "group": "Democrat",
+            "id": "300011",
+            "name": "Barbara Boxer"
+        },
+        {
+            "group": "Republican",
+            "id": "400040",
+            "name": "John Boozman"
+        },
+        {
+            "group": "Republican",
+            "id": "300030",
+            "name": "Michael Crapo"
+        },
+        {
+            "group": "Republican",
+            "id": "300023",
+            "name": "Thad Cochran"
+        },
+        {
+            "group": "Democrat",
+            "id": "300038",
+            "name": "Richard Durbin"
+        },
+        {
+            "group": "Republican",
+            "id": "300041",
+            "name": "Michael Enzi"
+        },
+        {
+            "group": "Republican",
+            "id": "300048",
+            "name": "Charles Grassley"
+        },
+        {
+            "group": "Democrat",
+            "id": "400413",
+            "name": "Tom Udall"
+        },
+        {
+            "group": "Democrat",
+            "id": "300051",
+            "name": "Thomas Harkin"
+        },
+        {
+            "group": "Republican",
+            "id": "400034",
+            "name": "Roy Blunt"
+        },
+        {
+            "group": "Republican",
+            "id": "400284",
+            "name": "Jerry Moran"
+        },
+        {
+            "group": "Republican",
+            "id": "400222",
+            "name": "Mark Kirk"
+        },
+        {
+            "group": "Democrat",
+            "id": "400412",
+            "name": "Mark Udall"
+        },
+        {
+            "group": "Republican",
+            "id": "400418",
+            "name": "David Vitter"
+        },
+        {
+            "group": "Republican",
+            "id": "300025",
+            "name": "Susan Collins"
+        },
+        {
+            "group": "Democrat",
+            "id": "300066",
+            "name": "Carl Levin"
+        },
+        {
+            "group": "Democrat",
+            "id": "412507",
+            "name": "Brian Schatz"
+        },
+        {
+            "group": "Democrat",
+            "id": "300065",
+            "name": "Patrick Leahy"
+        },
+        {
+            "group": "Republican",
+            "id": "300027",
+            "name": "John Cornyn"
+        },
+        {
+            "group": "Democrat",
+            "id": "300073",
+            "name": "Barbara Mikulski"
+        },
+        {
+            "group": "Republican",
+            "id": "300021",
+            "name": "Saxby Chambliss"
+        },
+        {
+            "group": "Republican",
+            "id": "300071",
+            "name": "John McCain"
+        },
+        {
+            "group": "Democrat",
+            "id": "300081",
+            "name": "John Reed"
+        },
+        {
+            "group": "Republican",
+            "id": "300047",
+            "name": "Lindsey Graham"
+        },
+        {
+            "group": "Republican",
+            "id": "300088",
+            "name": "Jefferson Sessions"
+        },
+        {
+            "group": "Democrat",
+            "id": "300084",
+            "name": "John Rockefeller"
+        },
+        {
+            "group": "Republican",
+            "id": "300055",
+            "name": "James Inhofe"
+        },
+        {
+            "group": "Democrat",
+            "id": "300058",
+            "name": "Tim Johnson"
+        },
+        {
+            "group": "Democrat",
+            "id": "300063",
+            "name": "Mary Landrieu"
+        },
+        {
+            "group": "Democrat",
+            "id": "300080",
+            "name": "Mark Pryor"
+        },
+        {
+            "group": "Republican",
+            "id": "400576",
+            "name": "Thomas Coburn"
+        },
+        {
+            "group": "Republican",
+            "id": "402675",
+            "name": "Daniel Coats"
+        },
+        {
+            "group": "Republican",
+            "id": "412320",
+            "name": "Mike Johanns"
+        },
+        {
+            "group": "Democrat",
+            "id": "300076",
+            "name": "Patty Murray"
+        },
+        {
+            "group": "Republican",
+            "id": "300075",
+            "name": "Lisa Murkowski"
+        },
+        {
+            "group": "Republican",
+            "id": "300072",
+            "name": "Mitch McConnell"
+        },
+        {
+            "group": "Democrat",
+            "id": "300082",
+            "name": "Harry Reid"
+        },
+        {
+            "group": "Republican",
+            "id": "300089",
+            "name": "Richard Shelby"
+        },
+        {
+            "group": "Democrat",
+            "id": "412378",
+            "name": "Alan Franken"
+        },
+        {
+            "group": "Democrat",
+            "id": "300100",
+            "name": "Ron Wyden"
+        },
+        {
+            "group": "Republican",
+            "id": "300083",
+            "name": "Pat Roberts"
+        },
+        {
+            "group": "Republican",
+            "id": "412322",
+            "name": "James Risch"
+        },
+        {
+            "group": "Democrat",
+            "id": "300087",
+            "name": "Charles Schumer"
+        },
+        {
+            "group": "Democrat",
+            "id": "412323",
+            "name": "Jeanne Shaheen"
+        },
+        {
+            "group": "Republican",
+            "id": "412492",
+            "name": "Rand Paul"
+        },
+        {
+            "group": "Republican",
+            "id": "400546",
+            "name": "John Thune"
+        },
+        {
+            "group": "Democrat",
+            "id": "412490",
+            "name": "Richard Blumenthal"
+        },
+        {
+            "group": "Democrat",
+            "id": "412325",
+            "name": "Jeff Merkley"
+        },
+        {
+            "group": "Democrat",
+            "id": "412321",
+            "name": "Mark Warner"
+        },
+        {
+            "group": "Democrat",
+            "id": "412324",
+            "name": "Kay Hagan"
+        },
+        {
+            "group": "Democrat",
+            "id": "412326",
+            "name": "Mark Begich"
+        },
+        {
+            "group": "Democrat",
+            "id": "412390",
+            "name": "Chris Coons"
+        },
+        {
+            "group": "Democrat",
+            "id": "412330",
+            "name": "Michael Bennet"
+        },
+        {
+            "group": "Democrat",
+            "id": "412582",
+            "name": "Timothy Kaine"
+        },
+        {
+            "group": "Republican",
+            "id": "412495",
+            "name": "Mike Lee"
+        },
+        {
+            "group": "Republican",
+            "id": "412493",
+            "name": "Kelly Ayotte"
+        },
+        {
+            "group": "Republican",
+            "id": "412494",
+            "name": "John Hoeven"
+        },
+        {
+            "group": "Republican",
+            "id": "412491",
+            "name": "Marco Rubio"
+        },
+        {
+            "group": "Republican",
+            "id": "412496",
+            "name": "Ron Johnson"
+        },
+        {
+            "group": "Republican",
+            "id": "400432",
+            "name": "Roger Wicker"
+        },
+        {
+            "group": "Republican",
+            "id": "412573",
+            "name": "Ted Cruz"
+        },
+        {
+            "group": "Republican",
+            "id": "412556",
+            "name": "Deb Fischer"
+        },
+        {
+            "group": "Democrat",
+            "id": "412554",
+            "name": "Heidi Heitkamp"
+        },
+        {
+            "group": "Independent",
+            "id": "412545",
+            "name": "Angus King"
+        },
+        {
+            "group": "Democrat",
+            "id": "412542",
+            "name": "Elizabeth Warren"
+        },
+        {
+            "group": "Republican",
+            "id": "412471",
+            "name": "Tim Scott"
+        },
+        {
+            "group": "Democrat",
+            "id": "412391",
+            "name": "Joe Manchin"
+        },
+        {
+            "group": "Democrat",
+            "id": "412281",
+            "name": "Martin Heinrich"
+        },
+        {
+            "group": "Democrat",
+            "id": "412246",
+            "name": "Robert Casey"
+        },
+        {
+            "group": "Republican",
+            "id": "412251",
+            "name": "John Barrasso"
+        },
+        {
+            "group": "Republican",
+            "id": "412248",
+            "name": "Bob Corker"
+        },
+        {
+            "group": "Democrat",
+            "id": "412247",
+            "name": "Sheldon Whitehouse"
+        },
+        {
+            "group": "Democrat",
+            "id": "412244",
+            "name": "Jon Tester"
+        },
+        {
+            "group": "Democrat",
+            "id": "412243",
+            "name": "Claire McCaskill"
+        },
+        {
+            "group": "Democrat",
+            "id": "412242",
+            "name": "Amy Klobuchar"
+        },
+        {
+            "group": "Democrat",
+            "id": "412223",
+            "name": "Kirsten Gillibrand"
+        },
+        {
+            "group": "Republican",
+            "id": "412218",
+            "name": "Dean Heller"
+        },
+        {
+            "group": "Democrat",
+            "id": "412205",
+            "name": "Joe Donnelly"
+        },
+        {
+            "group": "Democrat",
+            "id": "412200",
+            "name": "Mazie Hirono"
+        },
+        {
+            "group": "Democrat",
+            "id": "412194",
+            "name": "Christopher Murphy"
+        },
+        {
+            "group": "Democrat",
+            "id": "300019",
+            "name": "Thomas Carper"
+        },
+        {
+            "group": "Democrat",
+            "id": "300093",
+            "name": "Debbie Stabenow"
+        },
+        {
+            "group": "Democrat",
+            "id": "300078",
+            "name": "Bill Nelson"
+        },
+        {
+            "group": "Democrat",
+            "id": "300043",
+            "name": "Dianne Feinstein"
+        },
+        {
+            "group": "Democrat",
+            "id": "300018",
+            "name": "Maria Cantwell"
+        },
+        {
+            "group": "Republican",
+            "id": "300052",
+            "name": "Orrin Hatch"
+        },
+        {
+            "group": "Independent",
+            "id": "400357",
+            "name": "Bernard Sanders"
+        },
+        {
+            "group": "Democrat",
+            "id": "400272",
+            "name": "Robert Menndez"
+        },
+        {
+            "group": "Republican",
+            "id": "400134",
+            "name": "Jeff Flake"
+        },
+        {
+            "group": "Democrat",
+            "id": "400064",
+            "name": "Benjamin Cardin"
+        },
+        {
+            "group": "Democrat",
+            "id": "400050",
+            "name": "Sherrod Brown"
+        },
+        {
+            "group": "Democrat",
+            "id": "412598",
+            "name": "Cory Booker"
+        },
+        {
+            "group": "Democrat",
+            "id": "400013",
+            "name": "Tammy Baldwin"
+        },
+        {
+            "group": "Democrat",
+            "id": "400253",
+            "name": "Edward Markey"
+        },
+        {
+            "group": "Democrat",
+            "id": "412602",
+            "name": "John Walsh"
+        }
+    ],
+    "links": [
+        {
+            "source": 77,
+            "target": 84,
+            "value": 1
+        },
+        {
+            "source": 81,
+            "target": 93,
+            "value": 1
+        },
+        {
+            "source": 66,
+            "target": 81,
+            "value": 1
+        },
+        {
+            "source": 66,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 66,
+            "target": 93,
+            "value": 1
+        },
+        {
+            "source": 81,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 90,
+            "target": 93,
+            "value": 1
+        },
+        {
+            "source": 72,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 77,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 84,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 77,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 77,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 84,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 84,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 87,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 65,
+            "target": 66,
+            "value": 1
+        },
+        {
+            "source": 65,
+            "target": 93,
+            "value": 1
+        },
+        {
+            "source": 65,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 87,
+            "target": 93,
+            "value": 1
+        },
+        {
+            "source": 14,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 14,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 90,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 78,
+            "target": 83,
+            "value": 1
+        },
+        {
+            "source": 77,
+            "target": 78,
+            "value": 1
+        },
+        {
+            "source": 77,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 78,
+            "target": 84,
+            "value": 1
+        },
+        {
+            "source": 78,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 78,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 84,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 95,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 72,
+            "target": 98,
+            "value": 1
+        },
+        {
+            "source": 69,
+            "target": 78,
+            "value": 1
+        },
+        {
+            "source": 69,
+            "target": 82,
+            "value": 1
+        },
+        {
+            "source": 78,
+            "target": 82,
+            "value": 1
+        },
+        {
+            "source": 66,
+            "target": 71,
+            "value": 1
+        },
+        {
+            "source": 71,
+            "target": 81,
+            "value": 1
+        },
+        {
+            "source": 72,
+            "target": 77,
+            "value": 1
+        },
+        {
+            "source": 72,
+            "target": 78,
+            "value": 1
+        },
+        {
+            "source": 69,
+            "target": 72,
+            "value": 1
+        },
+        {
+            "source": 69,
+            "target": 77,
+            "value": 1
+        },
+        {
+            "source": 69,
+            "target": 86,
+            "value": 1
+        },
+        {
+            "source": 69,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 69,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 69,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 78,
+            "target": 86,
+            "value": 1
+        },
+        {
+            "source": 78,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 86,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 86,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 86,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 87,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 69,
+            "target": 83,
+            "value": 1
+        },
+        {
+            "source": 72,
+            "target": 83,
+            "value": 1
+        },
+        {
+            "source": 72,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 77,
+            "target": 83,
+            "value": 1
+        },
+        {
+            "source": 83,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 69,
+            "target": 84,
+            "value": 1
+        },
+        {
+            "source": 72,
+            "target": 84,
+            "value": 1
+        },
+        {
+            "source": 72,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 68,
+            "target": 69,
+            "value": 1
+        },
+        {
+            "source": 68,
+            "target": 78,
+            "value": 1
+        },
+        {
+            "source": 68,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 68,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 65,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 93,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 74,
+            "target": 81,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 68,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 69,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 72,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 82,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 68,
+            "target": 72,
+            "value": 1
+        },
+        {
+            "source": 68,
+            "target": 77,
+            "value": 1
+        },
+        {
+            "source": 68,
+            "target": 82,
+            "value": 1
+        },
+        {
+            "source": 72,
+            "target": 82,
+            "value": 1
+        },
+        {
+            "source": 77,
+            "target": 82,
+            "value": 1
+        },
+        {
+            "source": 82,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 82,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 71,
+            "target": 78,
+            "value": 1
+        },
+        {
+            "source": 71,
+            "target": 82,
+            "value": 1
+        },
+        {
+            "source": 71,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 71,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 82,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 68,
+            "target": 83,
+            "value": 1
+        },
+        {
+            "source": 83,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 78,
+            "value": 1
+        },
+        {
+            "source": 41,
+            "target": 82,
+            "value": 1
+        },
+        {
+            "source": 41,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 41,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 57,
+            "target": 78,
+            "value": 1
+        },
+        {
+            "source": 57,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 57,
+            "target": 95,
+            "value": 1
+        },
+        {
+            "source": 57,
+            "target": 97,
+            "value": 1
+        },
+        {
+            "source": 72,
+            "target": 87,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 71,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 86,
+            "value": 1
+        },
+        {
+            "source": 67,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 71,
+            "target": 77,
+            "value": 1
+        },
+        {
+            "source": 71,
+            "target": 84,
+            "value": 1
+        },
+        {
+            "source": 71,
+            "target": 86,
+            "value": 1
+        },
+        {
+            "source": 71,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 77,
+            "target": 86,
+            "value": 1
+        },
+        {
+            "source": 77,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 78,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 82,
+            "target": 84,
+            "value": 1
+        },
+        {
+            "source": 82,
+            "target": 86,
+            "value": 1
+        },
+        {
+            "source": 82,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 84,
+            "target": 86,
+            "value": 1
+        },
+        {
+            "source": 84,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 86,
+            "target": 90,
+            "value": 1
+        },
+        {
+            "source": 87,
+            "target": 90,
+            "value": 1
+        }
+    ]
+}

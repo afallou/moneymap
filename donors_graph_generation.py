@@ -5,12 +5,15 @@ import pdb
 # minimum donation amount, in dollars, for a
 # donor to appear on the graph
 DONOR_THRESHOLD = 20000
+CONTRIBUTION_TYPE = 'Independent Expenditure Against'
 
 def get_donors_dict():
     donors = load_data('contributors.json')
     donors_dict = {}
     for donor in donors:
         donors_dict[donor["contributor_ext_id"]] = donor["contributor_name"]
+    with open('donors_dict.json','w') as sf:
+        sf.write(simplejson.dumps(donors_dict, indent=4))
     return donors_dict
 
 def get_donor_lists(contributions, donors_names):
@@ -21,7 +24,7 @@ def get_donor_lists(contributions, donors_names):
         if len(contribution["contributors"]) > 0:
             cids = []
             for ct in contribution["contributors"]:
-                if float(ct["amount"]) >= DONOR_THRESHOLD:
+                if float(ct["amount"]) >= DONOR_THRESHOLD and ct["transaction_type_description"] == CONTRIBUTION_TYPE:
                     cid = ct["contributor_ext_id"]
                     nodes.append({"id": cid,
                                   "name": donors_names[cid],
@@ -29,6 +32,8 @@ def get_donor_lists(contributions, donors_names):
                                 })
                     cids.append(cid)
             sources[pid] = cids
+    with open('source.json','w') as sf:
+        sf.write(simplejson.dumps(sources, indent=4))
     return sources, nodes
 
 
@@ -42,4 +47,7 @@ def generate_graph(out_filename):
 
 
 if __name__ == "__main__":
-    generate_graph('donor_graph_20k_thresh.json')
+    thresh = str(DONOR_THRESHOLD / 1000)
+    fname = 'donor_graph_' + thresh + 'k_thresh_' + '_'.join(CONTRIBUTION_TYPE.lower().split()) + '.json'
+    print fname
+    generate_graph(fname)

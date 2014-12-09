@@ -1,6 +1,7 @@
 import snap
 import json
 import simplejson
+import pdb
 
 REPUBLICAN = ''
 DEMOCRAT = ''
@@ -28,7 +29,7 @@ def create_recipients_list(contributions, candidate_info):
     nodes = []
     for contribution in contributions:
         pid = contribution["recipient_id"]
-        nodes.append({"id": str(pid), 
+        nodes.append({"id": pid, 
                       "name": (candidate_info[pid][0] + ' ' + candidate_info[pid][1]).encode('ascii', 'ignore'), 
                       "group": candidate_info[pid][2].encode('ascii','ignore')
                       })
@@ -50,6 +51,8 @@ def create_edges(sources, nodes):
     for nid in node_ids:
         int_nodes_dict[nid] = i
         i += 1
+    with open('int_to_ids.json','w') as sf:
+        sf.write(simplejson.dumps(int_nodes_dict, indent=4))
     l = len(sources)
     print l
     cnt = 0
@@ -74,7 +77,7 @@ def generate_graph():
     print "done nodes"
     edges = create_edges(sources, nodes)
     print 'done edges'
-    with open('recipients_graph_test_large_sparse.json', 'w') as rf:
+    with open('recipients_graph.json', 'w') as rf:
         rf.write(simplejson.dumps({"nodes": nodes, "links": edges}, indent=4))
     return nodes
         
