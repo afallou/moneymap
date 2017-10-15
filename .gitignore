@@ -1,4 +1,4 @@
 *.json
-*.pdf
+!report/*.pdf
 !name_dict.json
 !centrality.json
