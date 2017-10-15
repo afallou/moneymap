@@ -5,7 +5,7 @@ This is the code used for a project done as part of class [CS224w](http://web.st
 
 The aim of the project was to understand the influence of money in U.S. politics through a graphical analysis of campaign finance data (who donates to whom) and Congress voting data (how members of Congress on particular laws).
 
-See the report folder for [a more complete report](./report/analysis-political-network.pdf) on the work
+See the report folder for [a more complete report](./report/analysis-political-networks.pdf) on the work
 
 ### Files ###
 fetching_data.py - fetches data from the sunlight foundation API
